@@ -1,0 +1,601 @@
+Delivered-To: agustin@media150.com
+Received: by 2002:a05:6214:c4a:b0:917:9017:8a26 with SMTP id r10csp2297782qvj;
+        Fri, 9 Oct 2026 09:45:48 -0700 (PDT)
+X-Received: by 2002:a05:7022:ea8c:b0:136:b50c:c0e9 with SMTP id a92af1059eb24-16a5f9b065fmr2597934c88.21.1791564346847;
+        Fri, 09 Oct 2026 09:45:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1791564346; cv=none;
+        d=google.com; s=arc-20260327;
+        b=fYmVavB5xnWAfpk6c1BsR4aOVDx7JbDRc7BK9MgVtscPX6jeTKbfAle0//UucmQu03
+         rdGOyIdNNNUzEwUTZ37Vo3JPnalr4va8pcQ6YFho6pq7HD7dc12fN2r9SRk/FfgmgXpR
+         XdksNAzyXlrCYrZOC2dW3Ozmdeg44rqH932nQ41jS68dzjh0l9ENRoEn3modGcoqp2KU
+         fQWVcEVQ8B9uCXheuURODvUgh+i7B2zyHxe8m1/3eGSnjZPnohI1yjy8OXj4ankwDcr5
+         H/qo0e/GNfMzr5Obn97L7+IjfD3XTiI0+ksvFwqVWhsubTCyam773uIsnQj/POYHj2bq
+         U26w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=TO+sIXnaOyZ6kN9ZHAQ5s7UbeHTFsb8WLCdwV9tV5n8=;
+        fh=HHrjEAvXg1voA2ribokICAGLU0uXgDCGQin+OhhN30c=;
+        b=M9Rq9o/5asXy5vLMKZ+kr7lm4OIe+sBmmrMq3YWPSgQUpJAd8Fnjd67J4sy9/KjY5l
+         rNAoWMG/X/UNNqPDk4rmFzgZd3x217zwMMR5vjZrSr2kAupTPYghRebz830RDJU3DHi7
+         KDGYb5RvyYMd8+5DPBihBUv8ldCJoY97U7vC15A5WJb/vw1fg1NOxbMMxSZMgLZTIyC9
+         6C/IEJ64cKoY5wLZGiWOmr2T+jlzGqCKwfU0/qM5ZB7s4t4zgd1V0k1c2zarR5JGcnJd
+         mPb0Ag4JGWkOJde0Fx17ayVFz3BBPocrqi+sa3OFqVDv0fS8+wfJ4viHRlmZNWrApg5C
+         q/hQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=LEA3NCZi;
+       spf=pass (google.com: domain of msprvs1=20742aozhqptv=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) smtp.mailfrom="msprvs1=20742aOZHqPtv=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=20742aOZHqPtv=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-203-49-164.sparkpostmail.com (mta-203-49-164.sparkpostmail.com. [168.203.49.164])
+        by mx.google.com with ESMTPS id a92af1059eb24-169a4cd2d5esi12145609c88.61.2026.10.09.09.45.46
+        for <agustin@media150.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Fri, 09 Oct 2026 09:45:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20742aozhqptv=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) client-ip=168.203.49.164;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=LEA3NCZi;
+       spf=pass (google.com: domain of msprvs1=20742aozhqptv=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 168.203.49.164 as permitted sender) smtp.mailfrom="msprvs1=20742aOZHqPtv=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: BGKWjXxg4yKZoTdt/T6qyd57hO2UXTn7GRjdBMdH/Uc=|eyJzdWJhY2NvdW50X2l
+	kIjoiMTAxMTciLCJyIjoiYWd1c3RpbkBtZWRpYTE1MC5jb20iLCJjdXN0b21lcl9
+	pZCI6IjMwMzI4NyIsInRlbmFudF9pZCI6InNwYyIsIm1lc3NhZ2VfaWQiOiI2YWM
+	1MzgxYWM5NmE3NWY0MzI4NSJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1791564344;
+	i=@colonysparkweekly.com;
+	bh=TO+sIXnaOyZ6kN9ZHAQ5s7UbeHTFsb8WLCdwV9tV5n8=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=LEA3NCZiG1xWz8eaohF88q6eTX9MIwmiSRLlBoeJadamLSSuGSCC2Q5vFCiPiLFcM
+	 uNvI4rQ6gjqATmFdg/6fp4lQWvCqmNJyW55zPgrFuIUq/50i7Q3P2SwFBpK0nwWloo
+	 2c9iEw//85sciDcR5iEzLAU0TV2go00oNaEhdO5s=
+Received: from [10.90.40.248] ([10.90.40.248])
+	by i-05bfc9e5577524ae9.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76471 r(msys-ecelerity:tags/5.3.0.24)) with REST
+	id 58/2B-45040-83A19CA6; Fri, 09 Oct 2026 16:45:44 +0000
+To: "agustin@media150.com" <agustin@media150.com>
+Message-ID: <58.2B.45040.83A19CA6@i-05bfc9e5577524ae9.mta1vrest.sd.prd.sparkpost>
+Date: Fri, 09 Oct 2026 16:45:44 +0000
+Content-Type: multipart/alternative; boundary="_----uOp4z13PM/0i4q6ZcXWOMg===_A6/2B-45040-83A19CA6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] Show the loss before it becomes an emergency
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3A4PbL_1jPDlJElyssgvvv5RpArqtFpgKX6B5yRi5t8lA~%7CeyAicmNwdF90byI6ICJhZ3VzdGluQG1lZGlhMTUwLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJzdWJhY2NvdW50X2lkIjogIjEwMTE3IiwgIm1lc3NhZ2VfaWQiOiAiNmFjNTM4MWFjOTZhNzVmNDMyODUiIH0~>,<https://unsubscribe.spmta.com/u/wyf65XM2cuWGGJcwe5jq_g~~/AASgtxA~/A8zsxAw-6GfOinogLFDPw9-JymqA7FQ9QFgwfiOtLyACuIX1BhT9sTdCOejVRLpW_YQ5vjGlRVZOrlkTVBj5Kw~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----uOp4z13PM/0i4q6ZcXWOMg===_A6/2B-45040-83A19CA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Make the ongoing production cost visible to prioritize improvements fairly=
+=0AMake the ongoing production cost visible to prioritize improvements fair=
+ly=0AShow the loss before it becomes an emergency. Make the ongoing product=
+ion cost=0Avisible to prioritize improvements=0Afairly.=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=0A=0AA weekly bri=
+efing for the industrial economy=0A=0A=0AThe Operations=0ABrief=0A=0ABy Bil=
+l Murphy, powered by Colony Spark [https://www.colonyspark.com/]=0A=0A=C2=
+=A0=0A=0AOctober 9, 2026=0A=0AIn a budget meeting, a safety repair gets fun=
+ded because it has a clear=0Adeadline: fix this or stop production. Another=
+ line is still running but loses=0Agood units every week, so its improvemen=
+t request sounds easier to defer. The=0Asecond project might save more capa=
+city, but you cannot compare them until the=0Aongoing loss is visible.=0A=
+=0AThis issue is about that gap: how to show the production loss already ha=
+ppening,=0Aestimate what another quarter could cost, and propose a small te=
+st to confirm=0Athe fix works before you ask for the full rollout.=0A=0AThi=
+s week=E2=80=99s question=0A=0AWhat most often stalls an improvement projec=
+t at your operation=3F=0A=0AThe budget goes to urgent work=0A[https://tally=
+.so/r/PdMD5d=3Fanswer=3DThe%20budget%20goes%20to%20urgent%20work&email=3D$=
+{email}&campaign=3Dtob_poll_2&v=3D1]=0A=0AHard to prove the payoff=0A[https=
+://tally.so/r/PdMD5d=3Fanswer=3DHard%20to%20prove%20the%20payoff&email=3D${=
+email}&campaign=3Dtob_poll_2&v=3D1]=0A=0ANo one free to run it=0A[https://t=
+ally.so/r/PdMD5d=3Fanswer=3DNo%20one%20free%20to%20run%20it&email=3D${email=
+}&campaign=3Dtob_poll_2&v=3D1]=0A=0AOne click is enough. I=E2=80=99ll share=
+ what we hear in a future issue.=0A=0ABill=0A=0A01The Shift=0A=0A=0AShow th=
+e Loss, Not Just the Promised Return=0A=0AA projected return on investment =
+can be easy to defer when a repair has a clear=0Adeadline. Make the request=
+ comparable by showing the current production loss in=0Ayour own terms.=0A=
+=0AA safety repair gets urgency because the consequence is immediate. An=0A=
+improvement project sounds optional when you frame it as future capacity. B=
+ut if=0Ayour records show that a line loses good units every week, or runs =
+in downtime=0Athat could be eliminated, that loss is happening now. The que=
+stion is whether to=0Aact on it this quarter or carry it forward.=0A=0AShow=
+ the loss in your operation=E2=80=99s own terms: downtime hours, good units=
+ scrapped=0Aor off-specification, or capacity hours displaced by rework. Th=
+en calculate what=0Awaiting could mean. Over the next comparable period, if=
+ the same pattern=0Arepeats, what production could be at risk=3F This does =
+not guarantee approval; it=0Amakes the improvement request comparable to an=
+ urgent repair.=0A=0ABrey-Krause lost weeks on its mirror line after equipm=
+ent failure=0A[https://www.nist.gov/mep/successstories/2024/mrc-process-imp=
+rovement-roadmap-delivers-capacity-and-sales-increases-while].=0AIts MEP pa=
+rtner recommended replacing the straightener and notcher first, with=0Alate=
+r upgrades on a roadmap. NIST reports 15% less downtime and 15% capacity=0A=
+growth for that company. Those are site-specific reported results, not a=0A=
+forecast for your operation or proof of a general budget rule.=0A=0AShow wh=
+at the loss actually costs before you forecast what a fix would save.=0A=0A=
+02From the Floor=0A=0A=0AWhy the Improvement Waits=0A=0AFrom the second Ope=
+rations Brief Roundtable: why high-value work keeps losing to=0Aurgent work=
+.=0A=0AMadhur Bedre [https://www.linkedin.com/in/madhur-bedre/]=E2=80=99s =
+process-optimization=0Aprojects compete with urgent maintenance and safety =
+work for plant budget. He=0Adescribed what that fight looks like from his s=
+ide of the table:=0A=0A=E2=80=9CWhat we work on would be high value, but it=
+=E2=80=99s not necessarily urgent=E2=80=A6 You=E2=80=99re=0Afighting for th=
+e same dollar, and maintenance definitely gets the priority over=0Aus.=E2=
+=80=9D=0A=0AMadhur Bedre [https://www.linkedin.com/in/madhur-bedre/]=0A=0AP=
+resident, Atlas Prediction Control [https://atlasprx.com/]. The Operations=
+=0ABrief Roundtable No. 02, October 2026=0A[https://www.theoperationsbrief.=
+com/roundtable/rt02-worth-the-investment/]=0A=0AHis answer is to translate =
+the work into what the plant already tracks, such as=0Aproduction rate, fla=
+ring and off-quality material, and put an ROI on it. That=0Ashows what doin=
+g nothing already costs, not just the upside you hope to gain=0Alater.=0A=
+=0AThe takeaway=0A=0AAn improvement framed as future upside will keep losin=
+g to urgent work. Framed=0Aas a loss you can already measure, it gets a fai=
+r hearing. The Stack below shows=0Ahow to put that loss on one page.=0A=0AR=
+ead the full Roundtable No. 02 recap =E2=86=92=0A[https://www.theoperations=
+brief.com/roundtable/rt02-worth-the-investment/]=0A=0A03The Stack=0A=0A=0AB=
+uild a One-Page Case for One Deferred Fix=0A=0AWork with an operations lead=
+ and a finance partner. Pull records from shift,=0Amaintenance, quality, an=
+d production to build a decision card that fits beside=0Aurgent requests at=
+ the next budget meeting.=0A=0ASample decision card (illustrative numbers, =
+not a reported plant result)=0A=0ADecision=0ATest a changeover-jam fix on o=
+ne packaging line before a larger rollout.=0A=0AOwner=0AProduction supervis=
+or; finance partner checks the cost assumptions.=0A=0APresent loss=0AOver 1=
+2 weeks, records show 30 stop hours. A supervisor verifies that 12 hours=0A=
+came from the jam this fix addresses; exclude the other 18.=0A=0ACapacity a=
+t risk=0AAt 40 good units per staffed hour, 12 =C3=97 40 =3D up to 480 good=
+ units of capacity,=0Anot 480 guaranteed sales.=0A=0ACost of waiting=0AIf t=
+he same verified pattern repeats over the next comparable 12 weeks, up to=
+=0Aanother 480 units of capacity could be at risk. Finance checks actual de=
+mand,=0Acontribution, scrap or overtime overlap, and fix cost before assign=
+ing dollars.=0ADo not count the same loss twice.=0A=0AFirst phase=0ARun a f=
+our-week test on that line. Agree in advance on the improvement threshold=
+=0Aand the stop-or-expand decision. If the records show little fixable loss=
+, or the=0Atest does not reduce it, do not make the larger claim.=0A=0AOpti=
+onal AI step=0AIf cause notes are messy, use AI only to suggest which notes=
+ mention the jam. A=0Aperson checks every label against the original record=
+s. Skip this when cause=0Acodes are already clean; the totals and math come=
+ from plant records.=0A=0AThis is a hypothetical card, not an observed cust=
+omer result. It is our own=0Aapplication of the panel=E2=80=99s discussion,=
+ not a template from any panelist.=0A=0ABring one such page to the next bud=
+get discussion. It informs a decision without=0Aoverruling a safety obligat=
+ion. Show the cost of doing nothing, propose a test=0Ato confirm the fix wo=
+rks, and let the numbers speak for the improvement.=0A=0AThe Operations Bri=
+ef=0A=0ABy Bill Murphy, powered by Colony Spark [https://www.colonyspark.co=
+m/]=0A=0AA weekly briefing on the decisions, people, and systems shaping ma=
+nufacturing=0Aand distribution.=0A=0A=C2=A0=0A=0AColony Spark, 170 Mason St=
+reet, Greenwich, Connecticut 06830, United States=0A=0AYou=E2=80=99re recei=
+ving this because you subscribed to The Operations Brief.=0A=0A=C2=A9 2026 =
+Colony Spark. All rights reserved.
+--_----uOp4z13PM/0i4q6ZcXWOMg===_A6/2B-45040-83A19CA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office"><head>=0A<meta charset=3D"UTF-8">=0A<meta name=3D"viewport"=
+ content=3D"width=3Ddevice-width, initial-scale=3D1.0">=0A<meta http-equiv=
+=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0A<meta name=3D"x-apple-disable=
+-message-reformatting">=0A<meta name=3D"format-detection" content=3D"teleph=
+one=3Dno,address=3Dno,email=3Dno,date=3Dno,url=3Dno">=0A<meta name=3D"color=
+-scheme" content=3D"light only">=0A<meta name=3D"supported-color-schemes" c=
+ontent=3D"light only">=0A<title>The Operations Brief &#x2014; October 9, 20=
+26</title>=0A<!--[if mso]>=0A<xml><o:OfficeDocumentSettings><o:PixelsPerInc=
+h>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>=0A<sty=
+le type=3D"text/css">=0Atable, td, th {border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt;}=0Atd, p, a, span, div, h1, h2, h3 {ms=
+o-line-height-rule: exactly;}=0Abody, table, td, p, a, h1, h2, h3 {font-fam=
+ily: 'Segoe UI', Arial, sans-serif !important;}=0A</style>=0A<![endif]-->=
+=0A<style type=3D"text/css">=0A@media only screen and (max-width:480px) {=
+=0A.px { padding:32px 22px !important; }=0A.px-a { padding:20px 22px !impor=
+tant; }=0A.px-f { padding:28px 22px !important; }=0A.h1 { font-size:40px !i=
+mportant; line-height:44px !important; letter-spacing:-1.5px !important; }=
+=0A}=0A</style>=0A</head>=0A<body bgcolor=3D"#f6f8f4" style=3D"margin:0;pad=
+ding:0;width:100%;background-color:#f6f8f4;-webkit-text-size-adjust:100%;-m=
+s-text-size-adjust:100%;color-scheme:light only;" class=3D"bodyClass"><span=
+ style=3D"display:none">Make the ongoing production cost visible to priorit=
+ize improvements fairly</span>=0A<div style=3D"display:none;max-height:0;ov=
+erflow:hidden;font-size:1px;line-height:1px;color:#f6f8f4;mso-hide:all;">Sh=
+ow the loss before it becomes an emergency. Make the ongoing production cos=
+t visible to prioritize improvements fairly.&#x200C;&#xA0;&#x200C;&#xA0;&#x=
+200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;=
+&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0=
+;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x2=
+00C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&=
+#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;=
+&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x20=
+0C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#=
+xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&=
+#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200=
+C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#x=
+A0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#=
+x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C=
+;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA=
+0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x=
+200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;=
+&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0=
+;&#x200C;&#xA0;&#x200C;&#xA0;</div>=0A<table role=3D"presentation" cellspac=
+ing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" bgcolor=3D"#f6f8f4"=
+ style=3D"background-color:#f6f8f4;width:100%;">=0A<tbody><tr>=0A<td align=
+=3D"center" valign=3D"top" style=3D"padding:24px 12px;">=0A<!--[if mso]><ta=
+ble role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+width=3D"600" align=3D"center"><tr><td><![endif]-->=0A<table role=3D"presen=
+tation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" ali=
+gn=3D"center" style=3D"max-width:600px;width:100%;">=0A<!-- HEADER -->=0A<t=
+body><tr>=0A<td align=3D"center" bgcolor=3D"#172b25" style=3D"background-co=
+lor:#172b25;border-radius:14px 14px 0 0;padding:44px 32px 36px;">=0A<p styl=
+e=3D"margin:0 0 16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMac=
+SystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size=
+:14px;line-height:20px;color:#b2c2af;mso-line-height-rule:exactly;font-weig=
+ht:700;text-align:center;">A weekly briefing for the industrial economy</p>=
+=0A<h1 class=3D"h1" style=3D"margin:0;padding:0;font-family:&apos;DM Sans&a=
+pos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica=
+,Arial,sans-serif;font-size:52px;line-height:54px;font-weight:600;letter-sp=
+acing:-2px;color:#f3f7eb;text-align:center;mso-line-height-rule:exactly;">T=
+he Operations<br><span style=3D"color:#dfef93;">Brief</span></h1>=0A<p styl=
+e=3D"margin:20px 0 0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMac=
+SystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size=
+:14px;line-height:20px;color:#c0cbbc;mso-line-height-rule:exactly;text-alig=
+n:center;">By <strong style=3D"color:#f3f7eb;font-weight:700;">Bill Murphy<=
+/strong>, powered by <a href=3D"https://www.colonyspark.com/" style=3D"colo=
+r:#c0cbbc;text-decoration:none;">Colony Spark</a></p>=0A</td>=0A</tr>=0A<tr=
+>=0A<td bgcolor=3D"#172b25" style=3D"background-color:#172b25;padding:0 32p=
+x;">=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0" width=3D"100%"><tbody><tr><td height=3D"1" bgcolor=3D"#3a4b40" st=
+yle=3D"height:1px;background-color:#3a4b40;font-size:0;line-height:0;">&#xA=
+0;</td></tr></tbody></table>=0A</td>=0A</tr>=0A<tr>=0A<td align=3D"center" =
+bgcolor=3D"#172b25" style=3D"background-color:#172b25;padding:14px 32px 16p=
+x;">=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:13px;line-height:18px;color:#b2c2af;mso-line-height-rule:exactly;te=
+xt-align:center;">October 9, 2026</p>=0A</td>=0A</tr>=0A<!-- INTRO -->=0A<t=
+r><td class=3D"px" style=3D"padding:40px 44px 40px;border-bottom:1px solid =
+#d8dfd6;">=0A<p style=3D"margin:0 0 16px;font-family:&apos;DM Sans&apos;,-a=
+pple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,=
+sans-serif;font-size:17px;line-height:28px;color:#142a25;mso-line-height-ru=
+le:exactly;">In a budget meeting, a safety repair gets funded because it ha=
+s a clear deadline: fix this or stop production. Another line is still runn=
+ing but loses good units every week, so its improvement request sounds easi=
+er to defer. The second project might save more capacity, but you cannot co=
+mpare them until the ongoing loss is visible.</p>=0A<p style=3D"margin:0 0 =
+16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos=
+;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-heigh=
+t:28px;color:#142a25;mso-line-height-rule:exactly;">This issue is about tha=
+t gap: how to show the production loss already happening, estimate what ano=
+ther quarter could cost, and propose a small test to confirm the fix works =
+before you ask for the full rollout.</p>=0A<table role=3D"presentation" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margi=
+n:0 0 20px;">=0A<tbody><tr><td bgcolor=3D"#e5ebdf" style=3D"background-colo=
+r:#e5ebdf;border-radius:10px;padding:22px 24px;">=0A<p style=3D"margin:0 0 =
+10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos=
+;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-heigh=
+t:20px;color:#142a25;mso-line-height-rule:exactly;font-weight:700;">This we=
+ek&#x2019;s question</p>=0A<p style=3D"margin:0 0 14px;font-family:&apos;DM=
+ Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,He=
+lvetica,Arial,sans-serif;font-size:17px;line-height:26px;color:#142a25;mso-=
+line-height-rule:exactly;font-weight:700;">What most often stalls an improv=
+ement project at your operation=3F</p>=0A<table role=3D"presentation" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:=
+0 0 8px;"><tbody><tr><td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFF=
+FFF;border:1px solid #2A6B4F;border-radius:8px;"><a href=3D"https://tally.s=
+o/r/PdMD5d=3Fanswer=3DThe%20budget%20goes%20to%20urgent%20work&email=3D${em=
+ail}&campaign=3Dtob_poll_2&v=3D1" target=3D"_blank" style=3D"display:block;=
+padding:12px 16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSys=
+temFont,&apos;Segoe UI&apos;,Arial,sans-serif;font-size:15px;font-weight:70=
+0;line-height:20px;color:#142A25;text-decoration:none;text-align:center;">T=
+he budget goes to urgent work</a></td></tr></tbody></table>=0A<table role=
+=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D=
+"100%" style=3D"margin:0 0 8px;"><tbody><tr><td bgcolor=3D"#FFFFFF" style=
+=3D"background-color:#FFFFFF;border:1px solid #2A6B4F;border-radius:8px;"><=
+a href=3D"https://tally.so/r/PdMD5d=3Fanswer=3DHard%20to%20prove%20the%20pa=
+yoff&email=3D${email}&campaign=3Dtob_poll_2&v=3D1" target=3D"_blank" style=
+=3D"display:block;padding:12px 16px;font-family:&apos;DM Sans&apos;,-apple-=
+system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Arial,sans-serif;font-size:1=
+5px;font-weight:700;line-height:20px;color:#142A25;text-decoration:none;tex=
+t-align:center;">Hard to prove the payoff</a></td></tr></tbody></table>=0A<=
+table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" width=3D"100%" style=3D"margin:0 0 8px;"><tbody><tr><td bgcolor=3D"#FFFFF=
+F" style=3D"background-color:#FFFFFF;border:1px solid #2A6B4F;border-radius=
+:8px;"><a href=3D"https://tally.so/r/PdMD5d=3Fanswer=3DNo%20one%20free%20to=
+%20run%20it&email=3D${email}&campaign=3Dtob_poll_2&v=3D1" target=3D"_blank"=
+ style=3D"display:block;padding:12px 16px;font-family:&apos;DM Sans&apos;,-=
+apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Arial,sans-serif;font-=
+size:15px;font-weight:700;line-height:20px;color:#142A25;text-decoration:no=
+ne;text-align:center;">No one free to run it</a></td></tr></tbody></table>=
+=0A<p style=3D"margin:6px 0 0;font-family:&apos;DM Sans&apos;,-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exactly;=
+">One click is enough. I&#x2019;ll share what we hear in a future issue.</p=
+>=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margin:0;font-family:&apos;=
+DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,=
+Helvetica,Arial,sans-serif;font-size:17px;line-height:28px;color:#142a25;ms=
+o-line-height-rule:exactly;font-weight:700;">Bill</p>=0A</td></tr>=0A<tr><t=
+d class=3D"px" style=3D"padding:40px 44px 40px;border-bottom:1px solid #d8d=
+fd6;">=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" style=3D"margin:0 0 18px;"><tbody><tr><td bgcolor=3D"#e5ebdf" s=
+tyle=3D"background-color:#e5ebdf;border-radius:4px;padding:3px 7px;font-fam=
+ily:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apo=
+s;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;color:=
+#142a25;mso-line-height-rule:exactly;">01</td><td style=3D"padding-left:10p=
+x;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:2=
+0px;font-weight:700;color:#142a25;mso-line-height-rule:exactly;">The Shift<=
+/td></tr></tbody></table>=0A<h2 style=3D"margin:0 0 10px;font-family:&apos;=
+DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,=
+Helvetica,Arial,sans-serif;font-size:28px;line-height:34px;font-weight:700;=
+letter-spacing:-0.5px;color:#142a25;mso-line-height-rule:exactly;">Show the=
+ Loss, Not Just the Promised Return</h2>=0A<p style=3D"margin:0 0 26px;font=
+-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI=
+&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:26px;co=
+lor:#6b7a71;mso-line-height-rule:exactly;">A projected return on investment=
+ can be easy to defer when a repair has a clear deadline. Make the request =
+comparable by showing the current production loss in your own terms.</p>=0A=
+<p style=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">=
+A safety repair gets urgency because the consequence is immediate. An impro=
+vement project sounds optional when you frame it as future capacity. But if=
+ your records show that a line loses good units every week, or runs in down=
+time that could be eliminated, that loss is happening now. The question is =
+whether to act on it this quarter or carry it forward.</p>=0A<p style=3D"ma=
+rgin:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemF=
+ont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;l=
+ine-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">Show the loss =
+in your operation&#x2019;s own terms: downtime hours, good units scrapped o=
+r off-specification, or capacity hours displaced by rework. Then calculate =
+what waiting could mean. Over the next comparable period, if the same patte=
+rn repeats, what production could be at risk=3F This does not guarantee app=
+roval; it makes the improvement request comparable to an urgent repair.</p>=
+=0A<p style=3D"margin:0 0 26px;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly=
+;"><a href=3D"https://www.nist.gov/mep/successstories/2024/mrc-process-impr=
+ovement-roadmap-delivers-capacity-and-sales-increases-while" style=3D"color=
+:#2a6b4f;text-decoration:underline;">Brey-Krause lost weeks on its mirror l=
+ine after equipment failure</a>. Its MEP partner recommended replacing the =
+straightener and notcher first, with later upgrades on a roadmap. NIST repo=
+rts 15% less downtime and 15% capacity growth for that company. Those are s=
+ite-specific reported results, not a forecast for your operation or proof o=
+f a general budget rule.</p>=0A<table role=3D"presentation" cellspacing=3D"=
+0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 26px;"=
+>=0A<tbody><tr><td style=3D"border-left:4px solid #2a6b4f;padding:4px 0 4px=
+ 20px;">=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-syst=
+em,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-seri=
+f;font-size:19px;line-height:29px;color:#142a25;mso-line-height-rule:exactl=
+y;font-weight:700;letter-spacing:-0.2px;">Show what the loss actually costs=
+ before you forecast what a fix would save.</p>=0A</td></tr>=0A</tbody></ta=
+ble>=0A</td></tr>=0A<tr><td class=3D"px" style=3D"padding:40px 44px 40px;bo=
+rder-bottom:1px solid #d8dfd6;">=0A<table role=3D"presentation" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" style=3D"margin:0 0 18px;"><tbody><tr=
+><td bgcolor=3D"#e5ebdf" style=3D"background-color:#e5ebdf;border-radius:4p=
+x;padding:3px 7px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSys=
+temFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12=
+px;line-height:16px;color:#142a25;mso-line-height-rule:exactly;">02</td><td=
+ style=3D"padding-left:10px;font-family:&apos;DM Sans&apos;,-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:15px;line-height:20px;font-weight:700;color:#142a25;mso-line-height=
+-rule:exactly;">From the Floor</td></tr></tbody></table>=0A<h2 style=3D"mar=
+gin:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFo=
+nt,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:28px;li=
+ne-height:34px;font-weight:700;letter-spacing:-0.5px;color:#142a25;mso-line=
+-height-rule:exactly;">Why the Improvement Waits</h2>=0A<p style=3D"margin:=
+0 0 26px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&=
+apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-h=
+eight:26px;color:#6b7a71;mso-line-height-rule:exactly;">From the second Ope=
+rations Brief Roundtable: why high-value work keeps losing to urgent work.<=
+/p>=0A<p style=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-sy=
+stem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-se=
+rif;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exac=
+tly;"><a href=3D"https://www.linkedin.com/in/madhur-bedre/" target=3D"_blan=
+k" style=3D"color:#2a6b4f;text-decoration:underline;">Madhur Bedre</a>&#x20=
+19;s process-optimization projects compete with urgent maintenance and safe=
+ty work for plant budget. He described what that fight looks like from his =
+side of the table:</p>=0A<table role=3D"presentation" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 26px;">=0A<t=
+body><tr><td bgcolor=3D"#172b25" style=3D"background-color:#172b25;border-r=
+adius:10px;padding:24px 26px;">=0A<table role=3D"presentation" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"40" style=3D"margin:0 0 16px=
+;">=0A<tbody><tr><td width=3D"40" height=3D"3" bgcolor=3D"#dfef93" style=3D=
+"width:40px;height:3px;background-color:#dfef93;font-size:0;line-height:0;"=
+>=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margin:0 0 18px;font-family=
+:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:20px;line-height:30px;color:#f3=
+f7eb;mso-line-height-rule:exactly;font-weight:500;letter-spacing:-0.2px;">&=
+#x201C;What we work on would be high value, but it&#x2019;s not necessarily=
+ urgent&#x2026; You&#x2019;re fighting for the same dollar, and maintenance=
+ definitely gets the priority over us.&#x201D;</p>=0A<p style=3D"margin:0 0=
+ 2px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos=
+;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-heigh=
+t:20px;color:#f3f7eb;mso-line-height-rule:exactly;font-weight:700;"><a href=
+=3D"https://www.linkedin.com/in/madhur-bedre/" target=3D"_blank" style=3D"c=
+olor:#f3f7eb;text-decoration:none;">Madhur Bedre</a></p>=0A<p style=3D"marg=
+in:0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos=
+;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-heigh=
+t:20px;color:#c0cbbc;mso-line-height-rule:exactly;">President, <a href=3D"h=
+ttps://atlasprx.com/" target=3D"_blank" style=3D"color:#dfef93;text-decorat=
+ion:underline;">Atlas Prediction Control</a>. <a href=3D"https://www.theope=
+rationsbrief.com/roundtable/rt02-worth-the-investment/" target=3D"_blank" s=
+tyle=3D"color:#dfef93;text-decoration:underline;">The Operations Brief Roun=
+dtable No. 02, October 2026</a></p>=0A</td></tr>=0A</tbody></table>=0A<p st=
+yle=3D"margin:0 0 26px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkM=
+acSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-si=
+ze:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">His a=
+nswer is to translate the work into what the plant already tracks, such as =
+production rate, flaring and off-quality material, and put an ROI on it. Th=
+at shows what doing nothing already costs, not just the upside you hope to =
+gain later.</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 20px;">=0A<tbody><t=
+r><td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;border:1px soli=
+d #d8dfd6;border-radius:10px;padding:22px 24px;">=0A<p style=3D"margin:0 0 =
+10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos=
+;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-heigh=
+t:20px;color:#142a25;mso-line-height-rule:exactly;font-weight:700;">The tak=
+eaway</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-ser=
+if;font-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exact=
+ly;">An improvement framed as future upside will keep losing to urgent work=
+. Framed as a loss you can already measure, it gets a fair hearing. The St=
+ack below shows how to put that loss on one page.</p>=0A</td></tr>=0A</tbod=
+y></table>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" width=3D"100%" style=3D"margin:0;"><tbody><tr><td bgcolor=
+=3D"#FFFFFF" style=3D"background-color:#FFFFFF;border:1px solid #2A6B4F;bor=
+der-radius:8px;"><a href=3D"https://www.theoperationsbrief.com/roundtable/r=
+t02-worth-the-investment/" target=3D"_blank" style=3D"display:block;padding=
+:12px 16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont=
+,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;font=
+-weight:700;line-height:20px;color:#142A25;text-decoration:none;text-align:=
+center;">Read the full Roundtable No. 02 recap &#x2192;</a></td></tr></tbod=
+y></table>=0A</td></tr>=0A<tr><td class=3D"px" style=3D"padding:40px 44px 4=
+0px;">=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" style=3D"margin:0 0 18px;"><tbody><tr><td bgcolor=3D"#e5ebdf" s=
+tyle=3D"background-color:#e5ebdf;border-radius:4px;padding:3px 7px;font-fam=
+ily:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apo=
+s;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;color:=
+#142a25;mso-line-height-rule:exactly;">03</td><td style=3D"padding-left:10p=
+x;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:2=
+0px;font-weight:700;color:#142a25;mso-line-height-rule:exactly;">The Stack<=
+/td></tr></tbody></table>=0A<h2 style=3D"margin:0 0 10px;font-family:&apos;=
+DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,=
+Helvetica,Arial,sans-serif;font-size:28px;line-height:34px;font-weight:700;=
+letter-spacing:-0.5px;color:#142a25;mso-line-height-rule:exactly;">Build a =
+One-Page Case for One Deferred Fix</h2>=0A<p style=3D"margin:0 0 26px;font-=
+family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&=
+apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:26px;col=
+or:#6b7a71;mso-line-height-rule:exactly;">Work with an operations lead and =
+a finance partner. Pull records from shift, maintenance, quality, and produ=
+ction to build a decision card that fits beside urgent requests at the next=
+ budget meeting.</p>=0A<p style=3D"margin:0 0 18px;font-family:&apos;DM San=
+s&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvet=
+ica,Arial,sans-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-line=
+-height-rule:exactly;"><strong style=3D"color:#142a25;font-weight:700;">Sam=
+ple decision card (illustrative numbers, not a reported plant result)</stro=
+ng></p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" =
+border=3D"0" width=3D"100%" style=3D"margin:0 0 18px;">=0A<tbody><tr><td bg=
+color=3D"#e5ebdf" style=3D"background-color:#e5ebdf;border-radius:10px;padd=
+ing:22px 24px;">=0A<p style=3D"margin:0 0 14px;font-family:&apos;DM Sans&ap=
+os;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,=
+Arial,sans-serif;font-size:15px;line-height:24px;color:#142a25;mso-line-hei=
+ght-rule:exactly;"><strong style=3D"color:#142a25;font-weight:700;">Decisio=
+n</strong><br>Test a changeover-jam fix on one packaging line before a larg=
+er rollout.</p>=0A<p style=3D"margin:0 0 14px;font-family:&apos;DM Sans&apo=
+s;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,A=
+rial,sans-serif;font-size:15px;line-height:24px;color:#142a25;mso-line-heig=
+ht-rule:exactly;"><strong style=3D"color:#142a25;font-weight:700;">Owner</s=
+trong><br>Production supervisor; finance partner checks the cost assumption=
+s.</p>=0A<p style=3D"margin:0 0 14px;font-family:&apos;DM Sans&apos;,-apple=
+-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans=
+-serif;font-size:15px;line-height:24px;color:#142a25;mso-line-height-rule:e=
+xactly;"><strong style=3D"color:#142a25;font-weight:700;">Present loss</str=
+ong><br>Over 12 weeks, records show 30 stop hours. A supervisor verifies th=
+at 12 hours came from the jam this fix addresses; exclude the other 18.</p>=
+=0A<p style=3D"margin:0 0 14px;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:15px;line-height:24px;color:#142a25;mso-line-height-rule:exactly=
+;"><strong style=3D"color:#142a25;font-weight:700;">Capacity at risk</stron=
+g><br>At 40 good units per staffed hour, 12 &#xD7; 40 =3D up to 480 good un=
+its of capacity, not 480 guaranteed sales.</p>=0A<p style=3D"margin:0 0 14p=
+x;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:2=
+4px;color:#142a25;mso-line-height-rule:exactly;"><strong style=3D"color:#14=
+2a25;font-weight:700;">Cost of waiting</strong><br>If the same verified pat=
+tern repeats over the next comparable 12 weeks, up to another 480 units of =
+capacity could be at risk. Finance checks actual demand, contribution, scra=
+p or overtime overlap, and fix cost before assigning dollars. Do not count =
+the same loss twice.</p>=0A<p style=3D"margin:0 0 14px;font-family:&apos;DM=
+ Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,He=
+lvetica,Arial,sans-serif;font-size:15px;line-height:24px;color:#142a25;mso-=
+line-height-rule:exactly;"><strong style=3D"color:#142a25;font-weight:700;"=
+>First phase</strong><br>Run a four-week test on that line. Agree in advanc=
+e on the improvement threshold and the stop-or-expand decision. If the reco=
+rds show little fixable loss, or the test does not reduce it, do not make t=
+he larger claim.</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;=
+,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Ari=
+al,sans-serif;font-size:15px;line-height:24px;color:#142a25;mso-line-height=
+-rule:exactly;"><strong style=3D"color:#142a25;font-weight:700;">Optional A=
+I step</strong><br>If cause notes are messy, use AI only to suggest which n=
+otes mention the jam. A person checks every label against the original reco=
+rds. Skip this when cause codes are already clean; the totals and math come=
+ from plant records.</p>=0A</td></tr>=0A</tbody></table>=0A<p style=3D"marg=
+in:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFon=
+t,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;lin=
+e-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">This is a hypoth=
+etical card, not an observed customer result. It is our own application of =
+the panel&#x2019;s discussion, not a template from any panelist.</p>=0A<p s=
+tyle=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,Blink=
+MacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-s=
+ize:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">Brin=
+g one such page to the next budget discussion. It informs a decision withou=
+t overruling a safety obligation. Show the cost of doing nothing, propose a=
+ test to confirm the fix works, and let the numbers speak for the improveme=
+nt.</p>=0A</td></tr>=0A<!-- FOOTER -->=0A<tr>=0A<td class=3D"px-f" bgcolor=
+=3D"#172b25" style=3D"background-color:#172b25;border-radius:14px;padding:3=
+4px 40px;">=0A<p style=3D"margin:0 0 4px;font-family:&apos;DM Sans&apos;,-a=
+pple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,=
+sans-serif;font-size:18px;line-height:24px;color:#f3f7eb;mso-line-height-ru=
+le:exactly;font-weight:700;letter-spacing:-0.2px;">The Operations Brief</p>=
+=0A<p style=3D"margin:0 0 14px;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:13px;line-height:20px;color:#c0cbbc;mso-line-height-rule:exactly=
+;">By Bill Murphy, powered by <a href=3D"https://www.colonyspark.com/" styl=
+e=3D"color:#dfef93;text-decoration:none;">Colony Spark</a></p>=0A<p style=
+=3D"margin:0 0 22px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacS=
+ystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:=
+14px;line-height:22px;color:#c0cbbc;mso-line-height-rule:exactly;">A weekly=
+ briefing on the decisions, people, and systems shaping manufacturing and d=
+istribution.</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 18px;"><tbody><tr>=
+<td height=3D"1" bgcolor=3D"#3a4b40" style=3D"height:1px;background-color:#=
+3a4b40;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table>=0A<p st=
+yle=3D"margin:0 0 6px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMa=
+cSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-siz=
+e:12px;line-height:18px;color:#b2c2af;mso-line-height-rule:exactly;">Colony=
+ Spark, 170 Mason Street, Greenwich, Connecticut 06830, United States</p>=
+=0A<p style=3D"margin:0 0 6px;font-family:&apos;DM Sans&apos;,-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:12px;line-height:18px;color:#b2c2af;mso-line-height-rule:exactly;=
+">You&#x2019;re receiving this because you subscribed to The Operations Bri=
+ef.</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:12px;line-height:18px;color:#b2c2af;mso-line-height-rule:exactly=
+;">&#xA9; 2026 Colony Spark. All rights reserved.</p>=0A</td>=0A</tr>=0A<tr=
+><td height=3D"24" style=3D"height:24px;font-size:0;line-height:0;">&#xA0;<=
+/td></tr>=0A</tbody></table>=0A<!--[if mso]></td></tr></table><![endif]-->=
+=0A</td>=0A</tr>=0A</tbody></table>=0A<img src=3D"https://trk.ebitcommweekl=
+y.com/opens=3Femail=3Def9adbd7-58a1-5141-a08b-c984cd7ffc03&type=3Dhtml&info=
+=3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTR=
+mZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLW=
+I1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzkxNTY0MzQzfQ.x29AHGMiUSJYNWnyC5xuAJ-rFf=
+-CC9V7ZLjQQDej8TM" height=3D"1px" width=3D"1px"><table width=3D"100%" align=
+=3D"center"><tbody><tr><td width=3D"100%" align=3D"center">=0A        <a st=
+yle=3D"margin-left: auto; margin-right: auto; color: grey; font-size: 10px;=
+ text-decoration: underline;" href=3D"https://trk.ebitcommweekly.com/unsubs=
+cribes=3Femail=3Def9adbd7-58a1-5141-a08b-c984cd7ffc03&info=3DeyJhbGciOiJIUz=
+I1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJm=
+YTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg=
+1YTljIiwiaWF0IjoxNzkxNTY0MzQzfQ.x29AHGMiUSJYNWnyC5xuAJ-rFf-CC9V7ZLjQQDej8TM=
+&type=3Dhtml">Click here to unsubscribe</a>=0A        </td></tr></tbody></t=
+able></body></html>
+--_----uOp4z13PM/0i4q6ZcXWOMg===_A6/2B-45040-83A19CA6--
+
