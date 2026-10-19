@@ -1,0 +1,554 @@
+Delivered-To: agustin@media150.com
+Received: by 2002:a0c:e78a:0:b0:917:9017:8a26 with SMTP id x10csp3621022qvn;
+        Mon, 19 Oct 2026 07:46:00 -0700 (PDT)
+X-Received: by 2002:a05:6820:82c:b0:6f8:22d8:6549 with SMTP id 006d021491bc7-703528817a4mr4436968eaf.9.1792421160521;
+        Mon, 19 Oct 2026 07:46:00 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1792421160; cv=none;
+        d=google.com; s=arc-20260327;
+        b=n7GjlYCQXi7+s17QcYUn1HQ9S0WNj6mhQ9eWfisE2OqqB3np56cNv8Q5dvbG8bLAVy
+         g/0Up0vuTlrAbPZBPkVWJlguh80t1f+GuiwODjhEzvYYAlJJvyXibi+ZT4b/MnSteAmn
+         4QwJsjyZzbD7iTgg9egUfIjimVyLR0BnXoUXdi+iFdqSxK27Vbp25YusxsN6RmaPiRxW
+         W5aBNLUdJaDZZ15naB+O2gSlb9Fm7R+XlxCRDf9goMtsQCvLYbfC0+tHdUjq3JRvi2U3
+         nXyLVD4VCO2rq/IJmvUzH/jrQpLdDv+yoCI33kueZ+CQxtEPuZ5wVZqfkSfphp9RcdMg
+         W1bg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=wn1kBXKWdblsmGBajjfTHkQNrEafG8Wp+I9IVvF+H6Y=;
+        fh=HHrjEAvXg1voA2ribokICAGLU0uXgDCGQin+OhhN30c=;
+        b=TgBtw6drZz4VSY/fjq49fnAje/SnXTdExfIyvY/Bk3KyLQXnQKckELqUF6n7CwfCF4
+         kITSUjDioRpBu12vx6aaP6ApEU6tLDfcA/BsJqKtvnKnylnywwAEo2MZg6IHrWVDAFh4
+         NZuYxK1xf8DP+qqQ8ELe2++3XSKs4TkFcYnaKAsKzBgZ1iY5o4a6Cmj91o50rwz+cMdA
+         DpugJ9USfdH7tN/TXWR8f34TOtKkwJk95KDUwb2Jzl4+w7fKBX3egTYieGmD2pTsAyzW
+         N2Fz/7nl7v20FvrkigaqM13gVY2AyR7PfJeVehSVN0TenNPNczva+tWAdKEuNvg0zOiT
+         rL3A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=fkQ3FvkF;
+       spf=pass (google.com: domain of msprvs1=20752rhfjfanp=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 156.70.120.32 as permitted sender) smtp.mailfrom="msprvs1=20752rhFjfAnp=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=20752rhFjfAnp=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-70-120-32.sparkpostmail.com (mta-70-120-32.sparkpostmail.com. [156.70.120.32])
+        by mx.google.com with ESMTPS id 006d021491bc7-702e7f7ee28si11260731eaf.92.2026.10.19.07.46.00
+        for <agustin@media150.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Mon, 19 Oct 2026 07:46:00 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20752rhfjfanp=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 156.70.120.32 as permitted sender) client-ip=156.70.120.32;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=fkQ3FvkF;
+       spf=pass (google.com: domain of msprvs1=20752rhfjfanp=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 156.70.120.32 as permitted sender) smtp.mailfrom="msprvs1=20752rhFjfAnp=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: wgvQp5yLCxotAYBhjMMaRNMHiHAC1PWbjRXdJnxilC8=|eyJzdWJhY2NvdW50X2l
+	kIjoiMTAxMTciLCJtZXNzYWdlX2lkIjoiNmFkMDI3MmRkNjZhZmVhNjE4NzciLCJ
+	yIjoiYWd1c3RpbkBtZWRpYTE1MC5jb20iLCJ0ZW5hbnRfaWQiOiJzcGMiLCJjdXN
+	0b21lcl9pZCI6IjMwMzI4NyJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1792421159;
+	i=@colonysparkweekly.com;
+	bh=wn1kBXKWdblsmGBajjfTHkQNrEafG8Wp+I9IVvF+H6Y=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=fkQ3FvkFvE7fdqlH9ZdqyI9STYZtfifOSV//UcfhksPjlfaIYsr5sbAFCGPhVNimu
+	 uWZaOduYNwUXZjLDhTuKH0aWRH84TInVitIkTPkvw3u5c/6CZmGSSNHijC6ewStMCp
+	 1htgTDeFaCDUoVdw2zv4AgGD/CE6xBkBkQW5oLb4=
+Received: from [10.90.38.64] ([10.90.38.64])
+	by i-0fdace6bdbd88ab9b.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76471 r(msys-ecelerity:tags/5.3.0.24)) with REST
+	id 77/81-43356-72D26DA6; Mon, 19 Oct 2026 14:45:59 +0000
+To: "agustin@media150.com" <agustin@media150.com>
+Message-ID: <77.81.43356.72D26DA6@i-0fdace6bdbd88ab9b.mta1vrest.sd.prd.sparkpost>
+Date: Mon, 19 Oct 2026 14:45:59 +0000
+Content-Type: multipart/alternative; boundary="_----yw8l+EMSMgjJSIZp97tnIw===_64/81-43356-72D26DA6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] Before you buy another system
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3AG0rP0Eiooc0yH076ANtqkA6L5K3w9-c2uC3DRCeIz64~%7CeyAicmNwdF90byI6ICJhZ3VzdGluQG1lZGlhMTUwLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJzdWJhY2NvdW50X2lkIjogIjEwMTE3IiwgIm1lc3NhZ2VfaWQiOiAiNmFkMDI3MmRkNjZhZmVhNjE4NzciIH0~>,<https://unsubscribe.spmta.com/u/NZjgn5e08CANnjBEB7Aa1A~~/AASgtxA~/M5cuhfINQCZi_pqxzTD7V6rVqao9kxGxDnNPDqaykshGmuE2LR1Kj6C7ppAWa5gxWQKaAJYU6vCNndfcIdksUQ~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----yw8l+EMSMgjJSIZp97tnIw===_64/81-43356-72D26DA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+A missing receipt or late order can prompt a software request. Here=E2=80=
+=99s how to test whether the system itself is the constraint.=0AA missing r=
+eceipt or late order can prompt a software request. Here=E2=80=99s how to=
+=0Atest whether the system itself is the constraint.=0AReceiving can=E2=80=
+=99t find the PO. The order ships late. By Friday, someone is asking=0Afor =
+a new=0AWMS.=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=0A=0AA weekly briefing for the industrial economy=0A=0A=0AThe =
+Operations=0ABrief=0A=0ABy Bill Murphy, powered by Colony Spark [https://ww=
+w.colonyspark.com/]=0A=0A=C2=A0=0A=0AOctober 16, 2026=0A=0AReceiving can=E2=
+=80=99t find the PO. The order ships late. By Friday, someone is asking=0Af=
+or a new WMS.=0A=0ASometimes they=E2=80=99re right. Often the system was fi=
+ne and something upstream broke=0Afirst.=0A=0AThis week's question=0A=0ABef=
+ore you approve it, what would you check first=3F=0A=0ABroken handoff=0A[ht=
+tps://tally.so/r/Dq2vNl=3Fanswer=3DBroken%20handoff&email=3D${email}&campai=
+gn=3Dtob_poll_3&v=3D1]=0A=0ABad data=0A[https://tally.so/r/Dq2vNl=3Fanswer=
+=3DBad%20data&email=3D${email}&campaign=3Dtob_poll_3&v=3D1]=0A=0AUnused fea=
+ture=0A[https://tally.so/r/Dq2vNl=3Fanswer=3DUnused%20current-system%20feat=
+ure&email=3D${email}&campaign=3Dtob_poll_3&v=3D1]=0A=0AReal system gap=0A[h=
+ttps://tally.so/r/Dq2vNl=3Fanswer=3DGenuine%20capability%20gap&email=3D${em=
+ail}&campaign=3Dtob_poll_3&v=3D1]=0A=0AOne tap is enough. I=E2=80=99ll shar=
+e what we hear in a future issue.=0A=0AMore below: two companies that check=
+ed before they spent, a vendor who tells=0Abuyers when to wait, and a free =
+tool that=E2=80=99s yours to keep. Run it on your own=0Aorders any time som=
+ething ships late.=0A=0A01The Shift=0A=0A=0ATwo Companies, Two Answers=0A=
+=0ABoth diagnosed before deciding. For one, the answer was a new system; fo=
+r the=0Aother, fixing the one they had.=0A=0ATwo companies had operating pr=
+oblems. Both looked at how work actually moved=0Abefore they spent money. T=
+hey got different answers.=0A=0AGutchess Lumber was running on several prog=
+rams plus manual spreadsheets, and=0Akeeping the data right took constant o=
+versight. After mapping the process, the=0Ateam decided the system really w=
+as the problem. They chose a new ERP and rolled=0Ait out with minimal disru=
+ption to production. Their IT director says the payoff=0Ahas been less rewo=
+rk and better reporting.=0A=0AStainless Works had an ERP that was feeding t=
+he floor wrong information. They=0Adidn=E2=80=99t replace it. They correcte=
+d the routings and set up their work centers for=0Ascheduling, and lead tim=
+e dropped from 12 to 14 weeks to five.=0A=0ASame starting point, opposite a=
+nswers. The diagnosis decided it, not the request=0Afor new software.=0A=0A=
+Check for a broken handoff, bad data or an unused feature before you blame =
+the=0Asystem.=0A=0ABoth stories come from NIST MEP case studies.=0A=0A02Fro=
+m the Floor=0A=0A=0AWhat to Check Before You Sign=0A=0AKirsten Austin [http=
+s://www.linkedin.com/in/kirstenaustin/], President of DCSC=0AInc. [https://=
+www.dcsccorp.com/], sells technology into operations like yours.=0ASome of =
+her most useful advice to buyers is to hold off.=0A=0ASometimes they're not=
+ ready for the technology that we have. It's time for them=0Ato double back=
+.=0A=0AKirsten Austin=0A=0APresident, DCSC Inc. The Operations Brief Round=
+table No. 2, October 2, 2026=0A[https://www.theoperationsbrief.com/roundtab=
+le/rt02-worth-the-investment/]=0A=0AHer point: before you sign, look at you=
+r data, your floor layout and who owns=0Aeach handoff. Get those right and =
+whatever you buy later has a fair shot. That=E2=80=99s=0Aone vendor=E2=80=
+=99s view, and it matches what Stainless Works found.=0A=0ARead the full Ro=
+undtable No. 2 recap =E2=86=92=0A[https://www.theoperationsbrief.com/roundt=
+able/rt02-worth-the-investment/]=0A=0A03The Stack=0A=0A=0ARun the Check You=
+rself, or Let the Skill Do It=0A=0AA manual check you can run this week, an=
+d a skill that runs it for you.=0A=0ATry this before your next software req=
+uest.=0A=0APick your last three orders that shipped late or wrong. Trace ea=
+ch one from=0Aorder entry to the dock and mark where it stalled.=0A=0AThen =
+ask: was the information wrong, did it not get passed along, was there a=0A=
+feature you already have that nobody used, or could the system truly not do=
+ it=3F=0A=0AIf most of your answers land in the first three, new software w=
+on=E2=80=99t fix it.=0A=0AOr let the Purchase Verdict Skill do it.=0A=0AGiv=
+e it one order that went wrong, the system records for that order (pull the=
+m=0Abefore your system clears them out) and a few similar orders that went =
+right.=0A=0AYou get back a one-page answer: system problem or process probl=
+em. If it can=E2=80=99t=0Atell yet, it says what=E2=80=99s missing and who =
+needs to find it.=0A=0AWorks with Claude. Setup steps for Claude and ChatGP=
+T are on the download page.=0A=0ADownload the Purchase Verdict Skill=0A[htt=
+ps://github.com/bmurphy201/operations-brief-skills/releases/download/purcha=
+se-verdict-v1.0/purchase-verdict-v1.0.zip]=0A=0ASource and MIT license [htt=
+ps://github.com/bmurphy201/operations-brief-skills]=0A=0ABill=0A=0AThe Oper=
+ations Brief=0A=0ABy Bill Murphy, powered by Colony Spark [https://www.colo=
+nyspark.com/]=0A=0AA weekly briefing on the decisions, people, and systems =
+shaping manufacturing=0Aand distribution.=0A=0A=C2=A0=0A=0AColony Spark, 17=
+0 Mason Street, Greenwich, Connecticut 06830, United States=0A=0AYou're rec=
+eiving this because you subscribed to The Operations Brief.=0A=0A=C2=A9 202=
+6 Colony Spark. All rights reserved.
+--_----yw8l+EMSMgjJSIZp97tnIw===_64/81-43356-72D26DA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office"><head>=0A<meta charset=3D"UTF-8">=0A<meta name=3D"viewport"=
+ content=3D"width=3Ddevice-width, initial-scale=3D1.0">=0A<meta http-equiv=
+=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0A<meta name=3D"x-apple-disable=
+-message-reformatting">=0A<meta name=3D"format-detection" content=3D"teleph=
+one=3Dno,address=3Dno,email=3Dno,date=3Dno,url=3Dno">=0A<meta name=3D"color=
+-scheme" content=3D"light only">=0A<meta name=3D"supported-color-schemes" c=
+ontent=3D"light only">=0A<title>The Operations Brief</title>=0A<!--[if mso]=
+>=0A<xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:=
+AllowPNG/></o:OfficeDocumentSettings></xml>=0A<style type=3D"text/css">=0At=
+able, td, th {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-r=
+space: 0pt;}=0Atd, p, a, span, div, h1, h2, h3 {mso-line-height-rule: exact=
+ly;}=0Abody, table, td, p, a, h1, h2, h3 {font-family: 'Segoe UI', Arial, s=
+ans-serif !important;}=0A</style>=0A<![endif]-->=0A<style type=3D"text/css"=
+>=0A@media only screen and (max-width:480px) {=0A.px { padding:32px 22px !i=
+mportant; }=0A.px-a { padding:20px 22px !important; }=0A.px-f { padding:28p=
+x 22px !important; }=0A.h1 { font-size:40px !important; line-height:44px !i=
+mportant; letter-spacing:-1.5px !important; }=0A}=0A</style>=0A<style type=
+=3D"text/css">@media only screen and (max-width:620px){.osm-full{width:100%=
+!important;max-width:100%!important}.osm-full img{max-width:100%!important;=
+height:auto!important}}</style></head>=0A<body bgcolor=3D"#f6f8f4" style=3D=
+"margin:0;padding:0;width:100%;background-color:#f6f8f4;-webkit-text-size-a=
+djust:100%;-ms-text-size-adjust:100%;color-scheme:light only;" class=3D"bod=
+yClass"><span style=3D"display:none">A missing receipt or late order can pr=
+ompt a software request. Here&#x2019;s how to test whether the system itsel=
+f is the constraint.</span>=0A<div style=3D"display:none;max-height:0;overf=
+low:hidden;font-size:1px;line-height:1px;color:#f6f8f4;mso-hide:all;">Recei=
+ving can&#x2019;t find the PO. The order ships late. By Friday, someone is =
+asking for a new WMS.&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA=
+0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x=
+200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;=
+&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0=
+;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x2=
+00C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&=
+#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;=
+&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x20=
+0C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#=
+xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&=
+#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200=
+C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#x=
+A0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#=
+x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C=
+;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA=
+0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x=
+200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;=
+&#xA0;</div>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" bgcolor=3D"#f6f8f4" style=3D"background-=
+color:#f6f8f4;width:100%;">=0A<tbody><tr>=0A<td align=3D"center" valign=3D"=
+top" style=3D"padding:24px 12px;">=0A<!--[if mso]><table class=3D"osm-full"=
+ role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" wid=
+th=3D"600" align=3D"center"><tr><td><![endif]-->=0A<table role=3D"presentat=
+ion" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" align=
+=3D"center" style=3D"max-width:600px;width:100%;">=0A<!-- HEADER -->=0A<tbo=
+dy><tr>=0A<td align=3D"center" bgcolor=3D"#172b25" style=3D"background-colo=
+r:#172b25;border-radius:14px 14px 0 0;padding:44px 32px 36px;">=0A<p style=
+=3D"margin:0 0 16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacS=
+ystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:=
+14px;line-height:20px;color:#b2c2af;mso-line-height-rule:exactly;font-weigh=
+t:700;text-align:center;">A weekly briefing for the industrial economy</p>=
+=0A<h1 class=3D"h1" style=3D"margin:0;padding:0;font-family:&apos;DM Sans&a=
+pos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica=
+,Arial,sans-serif;font-size:52px;line-height:54px;font-weight:600;letter-sp=
+acing:-2px;color:#f3f7eb;text-align:center;mso-line-height-rule:exactly;">T=
+he Operations<br><span style=3D"color:#dfef93;">Brief</span></h1>=0A<p styl=
+e=3D"margin:20px 0 0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMac=
+SystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size=
+:14px;line-height:20px;color:#c0cbbc;mso-line-height-rule:exactly;text-alig=
+n:center;">By <strong style=3D"color:#f3f7eb;font-weight:700;">Bill Murphy<=
+/strong>, powered by <a href=3D"https://www.colonyspark.com/" style=3D"colo=
+r:#c0cbbc;text-decoration:none;">Colony Spark</a></p>=0A</td>=0A</tr>=0A<tr=
+>=0A<td bgcolor=3D"#172b25" style=3D"background-color:#172b25;padding:0 32p=
+x;">=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0" width=3D"100%"><tbody><tr><td height=3D"1" bgcolor=3D"#3a4b40" st=
+yle=3D"height:1px;background-color:#3a4b40;font-size:0;line-height:0;">&#xA=
+0;</td></tr></tbody></table>=0A</td>=0A</tr>=0A<tr>=0A<td align=3D"center" =
+bgcolor=3D"#172b25" style=3D"background-color:#172b25;padding:14px 32px 16p=
+x;">=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,B=
+linkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size:13px;line-height:18px;color:#b2c2af;mso-line-height-rule:exactly;te=
+xt-align:center;">October 16, 2026</p>=0A</td>=0A</tr>=0A<!-- INTRO -->=0A<=
+tr><td class=3D"px" style=3D"padding:40px 44px 40px;border-bottom:1px solid=
+ #d8dfd6;">=0A<p style=3D"margin:0 0 12px;font-family:&apos;DM Sans&apos;,-=
+apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial=
+,sans-serif;font-size:17px;line-height:28px;color:#142a25;mso-line-height-r=
+ule:exactly;">Receiving can&#x2019;t find the PO. The order ships late. By =
+Friday, someone is asking for a new WMS.</p>=0A<p style=3D"margin:0 0 20px;=
+font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:28p=
+x;color:#142a25;mso-line-height-rule:exactly;">Sometimes they&#x2019;re rig=
+ht. Often the system was fine and something upstream broke first.</p>=0A<ta=
+ble role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+width=3D"100%" style=3D"margin:0 0 20px;">=0A<tbody><tr><td bgcolor=3D"#e5e=
+bdf" style=3D"background-color:#e5ebdf;border-radius:10px;padding:22px 24px=
+;">=0A<p style=3D"margin:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-sy=
+stem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-se=
+rif;font-size:14px;line-height:20px;color:#142a25;mso-line-height-rule:exac=
+tly;font-weight:700;">This week&apos;s question</p>=0A<p style=3D"margin:0 =
+0 14px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&ap=
+os;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-hei=
+ght:26px;color:#142a25;mso-line-height-rule:exactly;font-weight:700;">Befor=
+e you approve it, what would you check first=3F</p>=0A<table role=3D"presen=
+tation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" sty=
+le=3D"margin:0 0 8px;"><tbody><tr><td bgcolor=3D"#FFFFFF" style=3D"backgrou=
+nd-color:#FFFFFF;border:1px solid #2A6B4F;border-radius:8px;"><a href=3D"ht=
+tps://tally.so/r/Dq2vNl=3Fanswer=3DBroken%20handoff&email=3D${email}&campai=
+gn=3Dtob_poll_3&v=3D1" target=3D"_blank" style=3D"display:block;padding:12p=
+x 16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&ap=
+os;Segoe UI&apos;,Arial,sans-serif;font-size:15px;font-weight:700;line-heig=
+ht:20px;color:#142A25;text-decoration:none;text-align:center;">Broken hando=
+ff</a></td></tr></tbody></table><table role=3D"presentation" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 8px;"=
+><tbody><tr><td bgcolor=3D"#FFFFFF" style=3D"background-color:#FFFFFF;borde=
+r:1px solid #2A6B4F;border-radius:8px;"><a href=3D"https://tally.so/r/Dq2vN=
+l=3Fanswer=3DBad%20data&email=3D${email}&campaign=3Dtob_poll_3&v=3D1" targe=
+t=3D"_blank" style=3D"display:block;padding:12px 16px;font-family:&apos;DM =
+Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Arial,sans=
+-serif;font-size:15px;font-weight:700;line-height:20px;color:#142A25;text-d=
+ecoration:none;text-align:center;">Bad data</a></td></tr></tbody></table><t=
+able role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ width=3D"100%" style=3D"margin:0 0 8px;"><tbody><tr><td bgcolor=3D"#FFFFFF=
+" style=3D"background-color:#FFFFFF;border:1px solid #2A6B4F;border-radius:=
+8px;"><a href=3D"https://tally.so/r/Dq2vNl=3Fanswer=3DUnused%20current-syst=
+em%20feature&email=3D${email}&campaign=3Dtob_poll_3&v=3D1" target=3D"_blank=
+" style=3D"display:block;padding:12px 16px;font-family:&apos;DM Sans&apos;,=
+-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Arial,sans-serif;font=
+-size:15px;font-weight:700;line-height:20px;color:#142A25;text-decoration:n=
+one;text-align:center;">Unused feature</a></td></tr></tbody></table><table =
+role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" widt=
+h=3D"100%" style=3D"margin:0 0 8px;"><tbody><tr><td bgcolor=3D"#FFFFFF" sty=
+le=3D"background-color:#FFFFFF;border:1px solid #2A6B4F;border-radius:8px;"=
+><a href=3D"https://tally.so/r/Dq2vNl=3Fanswer=3DGenuine%20capability%20gap=
+&email=3D${email}&campaign=3Dtob_poll_3&v=3D1" target=3D"_blank" style=3D"d=
+isplay:block;padding:12px 16px;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Arial,sans-serif;font-size:15px;f=
+ont-weight:700;line-height:20px;color:#142A25;text-decoration:none;text-ali=
+gn:center;">Real system gap</a></td></tr></tbody></table><p style=3D"margin=
+:6px 0 0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&=
+apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-h=
+eight:24px;color:#3f4f47;mso-line-height-rule:exactly;">One tap is enough. =
+I&#x2019;ll share what we hear in a future issue.</p></td></tr>=0A</tbody><=
+/table>=0A<p style=3D"margin:4px 0 0;font-family:&apos;DM Sans&apos;,-apple=
+-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans=
+-serif;font-size:17px;line-height:28px;color:#142a25;mso-line-height-rule:e=
+xactly;">More below: two companies that checked before they spent, a vendor=
+ who tells buyers when to wait, and a free tool that&#x2019;s yours to keep=
+. Run it on your own orders any time something ships late.</p>=0A</td></tr=
+>=0A<tr><td class=3D"px" style=3D"padding:40px 44px 40px;border-bottom:1px =
+solid #d8dfd6;">=0A<table role=3D"presentation" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" style=3D"margin:0 0 18px;"><tbody><tr><td bgcolor=3D"=
+#e5ebdf" style=3D"background-color:#e5ebdf;border-radius:4px;padding:3px 7p=
+x;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:1=
+6px;color:#142a25;mso-line-height-rule:exactly;">01</td><td style=3D"paddin=
+g-left:10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFon=
+t,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;lin=
+e-height:20px;font-weight:700;color:#142a25;mso-line-height-rule:exactly;">=
+The Shift</td></tr></tbody></table>=0A<h2 style=3D"margin:0 0 10px;font-fam=
+ily:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apo=
+s;,Roboto,Helvetica,Arial,sans-serif;font-size:28px;line-height:34px;font-w=
+eight:700;letter-spacing:-0.5px;color:#142a25;mso-line-height-rule:exactly;=
+">Two Companies, Two Answers</h2>=0A<p style=3D"margin:0 0 26px;font-family=
+:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:26px;color:#6b=
+7a71;mso-line-height-rule:exactly;">Both diagnosed before deciding. For one=
+, the answer was a new system; for the other, fixing the one they had.</p>=
+=0A<p style=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly=
+;">Two companies had operating problems. Both looked at how work actually m=
+oved before they spent money. They got different answers.</p>=0A<p style=3D=
+"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSyst=
+emFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16p=
+x;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">Gutchess Lu=
+mber was running on several programs plus manual spreadsheets, and keeping =
+the data right took constant oversight. After mapping the process, the team=
+ decided the system really was the problem. They chose a new ERP and rolled=
+ it out with minimal disruption to production. Their IT director says the p=
+ayoff has been less rework and better reporting.</p>=0A<p style=3D"margin:0=
+ 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&a=
+pos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-he=
+ight:27px;color:#3f4f47;mso-line-height-rule:exactly;">Stainless Works had =
+an ERP that was feeding the floor wrong information. They didn&#x2019;t rep=
+lace it. They corrected the routings and set up their work centers for sche=
+duling, and lead time dropped from 12 to 14 weeks to five.</p>=0A=0A<p styl=
+e=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMac=
+SystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size=
+:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">Same st=
+arting point, opposite answers. The diagnosis decided it, not the request f=
+or new software.</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 26px;">=0A<tbo=
+dy><tr><td style=3D"border-left:4px solid #2a6b4f;padding:4px 0 4px 20px;">=
+=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,Blink=
+MacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-s=
+ize:19px;line-height:29px;color:#142a25;mso-line-height-rule:exactly;font-w=
+eight:700;letter-spacing:-0.2px;">Check for a broken handoff, bad data or a=
+n unused feature before you blame the system.</p>=0A</td></tr>=0A</tbody></=
+table>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:14px;line-height:22px;color:#6b7a71;mso-line-height-rule:exactly;=
+">Both stories come from NIST MEP case studies.</p>=0A</td></tr>=0A<tr><td =
+class=3D"px" style=3D"padding:40px 44px 40px;border-bottom:1px solid #d8dfd=
+6;">=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0" style=3D"margin:0 0 18px;"><tbody><tr><td bgcolor=3D"#e5ebdf" sty=
+le=3D"background-color:#e5ebdf;border-radius:4px;padding:3px 7px;font-famil=
+y:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;=
+,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;color:#1=
+42a25;mso-line-height-rule:exactly;">02</td><td style=3D"padding-left:10px;=
+font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:20p=
+x;font-weight:700;color:#142a25;mso-line-height-rule:exactly;">From the Flo=
+or</td></tr></tbody></table>=0A<h2 style=3D"margin:0 0 10px;font-family:&ap=
+os;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robo=
+to,Helvetica,Arial,sans-serif;font-size:28px;line-height:34px;font-weight:7=
+00;letter-spacing:-0.5px;color:#142a25;mso-line-height-rule:exactly;">What =
+to Check Before You Sign</h2>=0A<p style=3D"margin:0 0 18px;font-family:&ap=
+os;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robo=
+to,Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;color:#3f4f47=
+;mso-line-height-rule:exactly;"><a href=3D"https://www.linkedin.com/in/kirs=
+tenaustin/" target=3D"_blank" style=3D"color:#2a6b4f;text-decoration:underl=
+ine;">Kirsten Austin</a>, President of <a href=3D"https://www.dcsccorp.com/=
+" target=3D"_blank" style=3D"color:#2a6b4f;text-decoration:underline;">DCSC=
+ Inc.</a>, sells technology into operations like yours. Some of her most us=
+eful advice to buyers is to hold off.</p>=0A<table role=3D"presentation" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"marg=
+in:0 0 26px;">=0A<tbody><tr><td bgcolor=3D"#172b25" style=3D"background-col=
+or:#172b25;border-radius:10px;padding:24px 26px;">=0A<table role=3D"present=
+ation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"40" style=
+=3D"margin:0 0 16px;">=0A<tbody><tr><td width=3D"40" height=3D"3" bgcolor=
+=3D"#dfef93" style=3D"width:40px;height:3px;background-color:#dfef93;font-s=
+ize:0;line-height:0;">=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margin=
+:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,=
+&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:20px;line-=
+height:30px;color:#f3f7eb;mso-line-height-rule:exactly;font-weight:500;lett=
+er-spacing:-0.2px;">Sometimes they&apos;re not ready for the technology tha=
+t we have. It&apos;s time for them to double back.</p>=0A<p style=3D"margin=
+:0 0 2px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&=
+apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-h=
+eight:20px;color:#f3f7eb;mso-line-height-rule:exactly;font-weight:700;">Kir=
+sten Austin</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-app=
+le-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sa=
+ns-serif;font-size:13px;line-height:20px;color:#c0cbbc;mso-line-height-rule=
+:exactly;">President, DCSC Inc. <a href=3D"https://www.theoperationsbrief.c=
+om/roundtable/rt02-worth-the-investment/" style=3D"color:#dfef93;text-decor=
+ation:underline;">The Operations Brief Roundtable No. 2, October 2, 2026</a=
+></p>=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margin:0 0 26px;font-fa=
+mily:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&ap=
+os;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;color=
+:#3f4f47;mso-line-height-rule:exactly;">Her point: before you sign, look at=
+ your data, your floor layout and who owns each handoff. Get those right an=
+d whatever you buy later has a fair shot. That&#x2019;s one vendor&#x2019;s=
+ view, and it matches what Stainless Works found.</p>=0A<table role=3D"pres=
+entation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" s=
+tyle=3D"margin:20px 0 0;"><tbody><tr><td bgcolor=3D"#FFFFFF" style=3D"backg=
+round-color:#FFFFFF;border:1px solid #2A6B4F;border-radius:8px;"><a href=3D=
+"https://www.theoperationsbrief.com/roundtable/rt02-worth-the-investment/" =
+target=3D"_blank" style=3D"display:block;padding:12px 16px;font-family:&apo=
+s;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Arial=
+,sans-serif;font-size:15px;font-weight:700;line-height:20px;color:#142A25;t=
+ext-decoration:none;text-align:center;">Read the full Roundtable No. 2 reca=
+p &#x2192;</a></td></tr></tbody></table>=0A</td></tr>=0A<tr><td class=3D"px=
+" style=3D"padding:40px 44px 40px;">=0A<table role=3D"presentation" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"margin:0 0 18px;"><tbody=
+><tr><td bgcolor=3D"#e5ebdf" style=3D"background-color:#e5ebdf;border-radiu=
+s:4px;padding:3px 7px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMa=
+cSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-siz=
+e:12px;line-height:16px;color:#142a25;mso-line-height-rule:exactly;">03</td=
+><td style=3D"padding-left:10px;font-family:&apos;DM Sans&apos;,-apple-syst=
+em,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-seri=
+f;font-size:15px;line-height:20px;font-weight:700;color:#142a25;mso-line-he=
+ight-rule:exactly;">The Stack</td></tr></tbody></table>=0A<h2 style=3D"marg=
+in:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFon=
+t,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:28px;lin=
+e-height:34px;font-weight:700;letter-spacing:-0.5px;color:#142a25;mso-line-=
+height-rule:exactly;">Run the Check Yourself, or Let the Skill Do It</h2>=
+=0A<p style=3D"margin:0 0 26px;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:17px;line-height:26px;color:#6b7a71;mso-line-height-rule:exactly=
+;">A manual check you can run this week, and a skill that runs it for you.<=
+/p>=0A<p style=3D"margin:8px 0 10px;font-family:&apos;DM Sans&apos;,-apple-=
+system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-=
+serif;font-size:17px;line-height:26px;color:#142a25;mso-line-height-rule:ex=
+actly;font-weight:700;">Try this before your next software request.</p>=0A<=
+p style=3D"margin:0 0 16px;font-family:&apos;DM Sans&apos;,-apple-system,Bl=
+inkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fon=
+t-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">P=
+ick your last three orders that shipped late or wrong. Trace each one from =
+order entry to the dock and mark where it stalled.</p>=0A<p style=3D"margin=
+:0 0 16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,=
+&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-=
+height:27px;color:#3f4f47;mso-line-height-rule:exactly;">Then ask: was the =
+information wrong, did it not get passed along, was there a feature you alr=
+eady have that nobody used, or could the system truly not do it=3F</p>=0A<p=
+ style=3D"margin:0 0 28px;font-family:&apos;DM Sans&apos;,-apple-system,Bli=
+nkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font=
+-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">If=
+ most of your answers land in the first three, new software won&#x2019;t fi=
+x it.</p>=0A<p style=3D"margin:8px 0 10px;font-family:&apos;DM Sans&apos;,-=
+apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial=
+,sans-serif;font-size:17px;line-height:26px;color:#142a25;mso-line-height-r=
+ule:exactly;font-weight:700;">Or let the Purchase Verdict Skill do it.</p>=
+=0A<p style=3D"margin:0 0 16px;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly=
+;">Give it one order that went wrong, the system records for that order (pu=
+ll them before your system clears them out) and a few similar orders that w=
+ent right.</p>=0A<p style=3D"margin:0 0 16px;font-family:&apos;DM Sans&apos=
+;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Ar=
+ial,sans-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-line-heigh=
+t-rule:exactly;">You get back a one-page answer: system problem or process =
+problem. If it can&#x2019;t tell yet, it says what&#x2019;s missing and who=
+ needs to find it.</p>=0A<p style=3D"margin:0 0 24px;font-family:&apos;DM S=
+ans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helv=
+etica,Arial,sans-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-li=
+ne-height-rule:exactly;">Works with Claude. Setup steps for Claude and Chat=
+GPT are on the download page.</p>=0A<table role=3D"presentation" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 8=
+px;"><tbody><tr><td bgcolor=3D"#2A6B4F" style=3D"background-color:#2A6B4F;b=
+order:1px solid #2A6B4F;border-radius:8px;"><a href=3D"https://github.com/b=
+murphy201/operations-brief-skills/releases/download/purchase-verdict-v1.0/p=
+urchase-verdict-v1.0.zip" target=3D"_blank" style=3D"display:block;padding:=
+12px 16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,=
+&apos;Segoe UI&apos;,Arial,sans-serif;font-size:15px;font-weight:700;line-h=
+eight:20px;color:#FFFFFF;text-decoration:none;text-align:center;">Download =
+the Purchase Verdict Skill</a></td></tr></tbody></table>=0A<p style=3D"marg=
+in:8px 0 0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont=
+,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;line=
+-height:20px;color:#6b7a71;mso-line-height-rule:exactly;text-align:center;"=
+><a href=3D"https://github.com/bmurphy201/operations-brief-skills" style=3D=
+"color:#2a6b4f;text-decoration:underline;">Source and MIT license</a></p>=
+=0A<p style=3D"margin:28px 0 0;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:17px;line-height:28px;color:#142a25;mso-line-height-rule:exactly=
+;font-weight:700;">Bill</p>=0A</td></tr>=0A<!-- FOOTER -->=0A<tr>=0A<td cla=
+ss=3D"px-f" bgcolor=3D"#172b25" style=3D"background-color:#172b25;border-ra=
+dius:14px;padding:34px 40px;">=0A<p style=3D"margin:0 0 4px;font-family:&ap=
+os;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Robo=
+to,Helvetica,Arial,sans-serif;font-size:18px;line-height:24px;color:#f3f7eb=
+;mso-line-height-rule:exactly;font-weight:700;letter-spacing:-0.2px;">The O=
+perations Brief</p>=0A<p style=3D"margin:0 0 14px;font-family:&apos;DM Sans=
+&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helveti=
+ca,Arial,sans-serif;font-size:13px;line-height:20px;color:#c0cbbc;mso-line-=
+height-rule:exactly;">By Bill Murphy, powered by <a href=3D"https://www.col=
+onyspark.com/" style=3D"color:#dfef93;text-decoration:none;">Colony Spark</=
+a></p>=0A<p style=3D"margin:0 0 22px;font-family:&apos;DM Sans&apos;,-apple=
+-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans=
+-serif;font-size:14px;line-height:22px;color:#c0cbbc;mso-line-height-rule:e=
+xactly;">A weekly briefing on the decisions, people, and systems shaping ma=
+nufacturing and distribution.</p>=0A<table role=3D"presentation" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 1=
+8px;"><tbody><tr><td height=3D"1" bgcolor=3D"#3a4b40" style=3D"height:1px;b=
+ackground-color:#3a4b40;font-size:0;line-height:0;">&#xA0;</td></tr></tbody=
+></table>=0A<p style=3D"margin:0 0 6px;font-family:&apos;DM Sans&apos;,-app=
+le-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sa=
+ns-serif;font-size:12px;line-height:18px;color:#b2c2af;mso-line-height-rule=
+:exactly;">Colony Spark, 170 Mason Street, Greenwich, Connecticut 06830, Un=
+ited States</p>=0A<p style=3D"margin:0 0 6px;font-family:&apos;DM Sans&apos=
+;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Ar=
+ial,sans-serif;font-size:12px;line-height:18px;color:#b2c2af;mso-line-heigh=
+t-rule:exactly;">You&apos;re receiving this because you subscribed to The O=
+perations Brief.</p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;=
+,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Ari=
+al,sans-serif;font-size:12px;line-height:18px;color:#b2c2af;mso-line-height=
+-rule:exactly;">&#xA9; 2026 Colony Spark. All rights reserved.</p>=0A</td>=
+=0A</tr>=0A<tr><td height=3D"24" style=3D"height:24px;font-size:0;line-heig=
+ht:0;">&#xA0;</td></tr>=0A</tbody></table>=0A<!--[if mso]></td></tr></table=
+><![endif]-->=0A</td>=0A</tr>=0A</tbody></table>=0A<img src=3D"https://trk.=
+ebitcommweekly.com/opens=3Femail=3Def9adbd7-58a1-5141-a08b-c984cd7ffc03&typ=
+e=3Dhtml&info=3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2Nz=
+A4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtM=
+DkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzkyNDIxMTU5fQ.lIu4jQ2GSpgkI=
+94PUjkUN6mjEuh2hivnpF-43rs_1pQ" height=3D"1px" width=3D"1px"><table width=
+=3D"100%" align=3D"center"><tbody><tr><td width=3D"100%" align=3D"center">=
+=0A        <a style=3D"margin-left: auto; margin-right: auto; color: grey; =
+font-size: 10px; text-decoration: underline;" href=3D"https://trk.ebitcommw=
+eekly.com/unsubscribes=3Femail=3Def9adbd7-58a1-5141-a08b-c984cd7ffc03&info=
+=3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTR=
+mZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLW=
+I1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzkyNDIxMTU5fQ.lIu4jQ2GSpgkI94PUjkUN6mjEu=
+h2hivnpF-43rs_1pQ&type=3Dhtml">Click here to unsubscribe</a>=0A        </td=
+></tr></tbody></table></body></html>
+--_----yw8l+EMSMgjJSIZp97tnIw===_64/81-43356-72D26DA6--
+
