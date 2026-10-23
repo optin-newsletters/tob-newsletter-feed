@@ -1,0 +1,625 @@
+Delivered-To: agustin@media150.com
+Received: by 2002:a0c:fa0e:0:b0:91c:462b:efd8 with SMTP id q14csp51291qvn;
+        Fri, 23 Oct 2026 08:39:43 -0700 (PDT)
+X-Received: by 2002:a05:701b:4194:20b0:189:d6bf:7eaa with SMTP id a92af1059eb24-195c4d61629mr3432184c88.16.1792769982723;
+        Fri, 23 Oct 2026 08:39:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1792769982; cv=none;
+        d=google.com; s=arc-20260327;
+        b=GMFYkVvfdxLDd2wN5EnsRK/F3v7EwudzSVOCbGvfF83D+cGkAD1MI4FUBDGjGREz3n
+         AZkTsRw5vWsotTYFcbAm3Os7esEyggLtr6/yZcImIt79gMtx/Xdub9cI7OX7GmdEiY0X
+         OUtucqfiJ/opv2ToDu2ZbuBt3vWxvH85JUig2CI0q08SKB2jX1wTlDQjkfzr0zBT/Tfl
+         StNX2SDqbgVwv/CxzYqAYtbp8dSE0O9caSO4lEXcezigkXc9DPqkjP0+pfDYyr7lKY84
+         6cmE/poZSNNJ2AHx9i9QB3oKszxb1d/Y5ImKAcX1NAGI46imb+3+qpsBaxtFIssK/eej
+         gRkw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :campaignid:credentialid:subject:mime-version:date:message-id:to
+         :dkim-signature;
+        bh=kKrMvfh4lHkGGzQdbs2GXdBFmCayuLGKVbnT8nLi2VQ=;
+        fh=HHrjEAvXg1voA2ribokICAGLU0uXgDCGQin+OhhN30c=;
+        b=Q/6FK7pKNaV+HXbVJn/ZiDSUtgBe08azGeG6q+BDXVNwnPyfZAtEdAwJ22vO5EEFGU
+         t13lyaaP2yOedYEYQ5ngScgxP0yIvhMZe+wowtfvb8V5A+5jZSGGeJ4ufXFgTa0FFghC
+         5e+16AdJpwdpZH5k4i/MJGwCg7wsxJNt1T36kgjnLKkmMtggV61Evns0npdlWeE/pwpQ
+         x8AAZ0DRZRAH87MZIZxgrg0EyRv+lVfmam/Wl73ovVIQGTk3OG4tif/APE0KLfTmZM6D
+         k29EdohLygPKfvy6QYintwwXlYex1COAnKekHlGaHD/9uIXBNjbEV2zci/2PJ/B2/9aV
+         JkLg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=RrFhroYo;
+       spf=pass (google.com: domain of msprvs1=207563ib6zw4j=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 192.174.90.59 as permitted sender) smtp.mailfrom="msprvs1=207563IB6Zw4j=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+Return-Path: <msprvs1=207563IB6Zw4j=bounces-303287-10117@mm-bounce.colonysparkweekly.com>
+Received: from mta-174-90-59.sparkpostmail.com (mta-174-90-59.sparkpostmail.com. [192.174.90.59])
+        by mx.google.com with ESMTPS id a92af1059eb24-197ee46e82esi900497c88.69.2026.10.23.08.39.42
+        for <agustin@media150.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Fri, 23 Oct 2026 08:39:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=207563ib6zw4j=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 192.174.90.59 as permitted sender) client-ip=192.174.90.59;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@colonysparkweekly.com header.s=mailmodo header.b=RrFhroYo;
+       spf=pass (google.com: domain of msprvs1=207563ib6zw4j=bounces-303287-10117@mm-bounce.colonysparkweekly.com designates 192.174.90.59 as permitted sender) smtp.mailfrom="msprvs1=207563IB6Zw4j=bounces-303287-10117@mm-bounce.colonysparkweekly.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=colonysparkweekly.com
+X-MSFBL: /91ffe+X/4iXbg3eCRDOElSMgdtmANrrWHH5q319WPs=|eyJyIjoiYWd1c3RpbkB
+	tZWRpYTE1MC5jb20iLCJjdXN0b21lcl9pZCI6IjMwMzI4NyIsInN1YmFjY291bnR
+	faWQiOiIxMDExNyIsInRlbmFudF9pZCI6InNwYyIsIm1lc3NhZ2VfaWQiOiI2YWR
+	hYmQ3ZmRiNmFlMWNiNWQzYyJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=colonysparkweekly.com; s=mailmodo; t=1792769981;
+	i=@colonysparkweekly.com;
+	bh=kKrMvfh4lHkGGzQdbs2GXdBFmCayuLGKVbnT8nLi2VQ=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=RrFhroYoyjptKQzvowPxKEXWY6EYzkDNZFl1rHi9uIdw41WTxvxCa8eTtHc+DZWNm
+	 wfio7GyUXDAdwXebSMzEYfIk1E5DxdUWV1cGTC8gNNWZYayhiGltTPEu9SiAOr+UNb
+	 vut9cT1wtu09IRYO/7mEVBihQsNV/Piw4+vOT3IA=
+Received: from [10.90.31.127] ([10.90.31.127])
+	by i-05873d11668935755.mta1vrest.sd.prd.sparkpost (ecelerity 5.3.0.76509 r(msys-ecelerity:tags/5.3.0.26)) with REST
+	id C3/D5-35942-DBF7BDA6; Fri, 23 Oct 2026 15:39:41 +0000
+To: "agustin@media150.com" <agustin@media150.com>
+Message-ID: <C3.D5.35942.DBF7BDA6@i-05873d11668935755.mta1vrest.sd.prd.sparkpost>
+Date: Fri, 23 Oct 2026 15:39:41 +0000
+Content-Type: multipart/alternative; boundary="_----viAaD314TqDe/nVG+a3pzA===_C1/D5-35942-DBF7BDA6"
+MIME-Version: 1.0
+Subject: [HTML Test Mail] Who runs it after the vendor leaves?
+Credentialid: 5a35d047-b747-4e36-9f1a-b36e5227aef1
+Campaignid: testmail
+From: "The Operations Brief" <hi@colonysparkweekly.com>
+Reply-To: hi@colonysparkweekly.com
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe%3A8u0pbAbR0W6omu4MnyqabwX8D4apcPitHNls-oPxnAc~%7CeyAicmNwdF90byI6ICJhZ3VzdGluQG1lZGlhMTUwLmNvbSIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgImN1c3RvbWVyX2lkIjogIjMwMzI4NyIsICJtZXNzYWdlX2lkIjogIjZhZGFiZDdmZGI2YWUxY2I1ZDNjIiwgInN1YmFjY291bnRfaWQiOiAiMTAxMTciIH0~>,<https://unsubscribe.spmta.com/u/Ax7tnazBuP8eQKeFTdWeKA~~/AASgtxA~/-oEAj6Ol_lgX_YFGKMxrTr3xqQSZbWGUgvwC1JgIdHXJZSXCS6rKfurnv245rHIMQozkD_bi-pvWUNO-TEh56g~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.10117.sparkpostmail.com>
+
+--_----viAaD314TqDe/nVG+a3pzA===_C1/D5-35942-DBF7BDA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Name the owner before you fund the project=E2=80=94and plan for when they l=
+eave.=0AName the owner before you fund the project=E2=80=94and plan for whe=
+n they leave.=0AName the owner before you fund the project, and plan for wh=
+en they=0Aleave.=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=0A=0AA weekly briefing for the industrial economy=0A=0A=
+=0AThe Operations=0ABrief=0A=0ABy Bill Murphy, powered by Colony Spark [htt=
+ps://www.colonyspark.com/]=0A=0A=C2=A0=0A=0AOctober 23, 2026=0A=0AYour 2027=
+ capital list puts a payback number next to each project. If it doesn't=0Aa=
+lso name the person who'll run that project after the installer leaves, no =
+one=0Ais on record to deliver the payback.=0A=0AThis week's question=0A=0AD=
+oes your 2027 capital list name who will run each project=3F=0A=0AYes, ever=
+y project=0A[https://tally.so/r/RWG6Jl=3Fanswer=3DYes%2C%20every%20project&=
+email=3D${email}&campaign=3Dtob_poll_4&v=3D1]=0A=0ASome of them=0A[https://=
+tally.so/r/RWG6Jl=3Fanswer=3DSome%20of%20them&email=3D${email}&campaign=3Dt=
+ob_poll_4&v=3D1]=0A=0ANot yet=0A[https://tally.so/r/RWG6Jl=3Fanswer=3DNot%2=
+0yet&email=3D${email}&campaign=3Dtob_poll_4&v=3D1]=0A=0AOne tap is enough.=
+=0A=0AMore below: two case studies on who carries an improvement, and a fou=
+r-column=0Acheck to run on your list before it's final.=0A=0A01The Shift=0A=
+=0A=0AName the Person Before You Fund the Project=0A=0AIn a survey Industry=
+Week reported on October 5, 36% of respondents named=0Aautomation and advan=
+ced technology as their top investment priority for 2027.=0AWorkforce train=
+ing came third, at 18%, and nearly 30% said their organizations=0Aaren=E2=
+=80=99t effective at attracting and keeping the next generation of talent.=
+=0A=0AA machine arrives on a set date. The people who learn it and keep it =
+working are=0Aharder to plan for, and some of them will leave.=0A=0AAt SMA,=
+ Inc., an agricultural parts supplier, the team that had used Toyota Kata=
+=0Ain the warehouse for almost two years took it to every department, with =
+help=0Afrom Arkansas Manufacturing Solutions. A NIST case study reports $1.=
+75 million=0Ain increased sales, $5 million in retained sales and $500,000 =
+in cost savings,=0Awithout saying over what period.=0A=0AAt Green Bay Packa=
+ging=E2=80=99s Arkansas Kraft mill, regular turnover means the mill=0Akeeps=
+ needing new internal auditors for its ISO 9001 quality system, so training=
+=0Athem is a standing job.=0A=0ASMA had people inside who owned the method.=
+ The mill has to keep replacing them.=0AEither way, an approval needs a nam=
+ed owner and a plan for who learns the work=0Anext.=0A=0A02From the Floor=
+=0A=0A=0ANo One Inside to Carry It=0A=0A"A lot of the improvement and optim=
+ization decisions in front of stakeholders, a=0Alot of the time, don't have=
+ any internal people to support them or champion=0Athem."=0A=0AMadhur Bedre=
+ [https://www.linkedin.com/in/madhur-bedre/]=0A=0APresident, Atlas Predicti=
+on Control [https://atlasprx.com/]. The Operations=0ABrief Roundtable No. 2=
+, October 2, 2026=0A[https://www.theoperationsbrief.com/roundtable/rt02-wor=
+th-the-investment/]=0A=0AMadhur's firm helps chemical and petrochemical pla=
+nts keep their process control=0Atuned. On the panel he tied the problem to=
+ attrition, with experienced people=0Aleaving plants and, in some cases, th=
+e industry. He also said companies have a=0Ablind spot past the ROI, in car=
+rying a project out and keeping its gains over=0Athe long run.=0A=0AThat's =
+one consultant's view from his own client work. It lines up with what=0AGre=
+en Bay Packaging is managing at its mill.=0A=0ARead the full Roundtable No.=
+ 2 recap=0A[https://www.theoperationsbrief.com/roundtable/rt02-worth-the-in=
+vestment/]=0A=0A03The Stack=0A=0A=0AAdd Four Columns to Your 2027 List=0A=
+=0AAt the October 2 roundtable I asked the panel what one thing a manufactu=
+rer=0Ashould check before approving its next improvement. Two of the three =
+answers=0Acame back to the people who'd carry it. Here's the check I'd run =
+with your plant=0Aleads this week.=0A=0AOn paper or in the spreadsheet you =
+already use, add these four columns to every=0Aproject on the list:=0A=0A=
+=C2=A0=0A=0AOwner: one person, by name.=0A=0A=C2=A0=0A=0AHours: how many ho=
+urs a week that person can actually give it, and what comes=0Aoff their pla=
+te to make room.=0A=0A=C2=A0=0A=0AFirst result: what the team will see work=
+ing in the first three months.=0A=0A=C2=A0=0A=0ABackup: who learns it along=
+side the owner and keeps it running if the owner=0Aleaves.=0A=0AFill in Bac=
+kup first, since it decides what happens to the project when the=0Aowner le=
+aves. Then add up each owner's hours across the whole list. A plant=0Amanag=
+er named on four projects is a capacity problem that no single row will=0As=
+how you.=0A=0AI've made the mistake the Hours column is there to catch. I b=
+uilt a content tool=0Afor a client team and recorded a walkthrough, and the=
+ three experts they'd=0Aassigned all got logins. When the engagement wound =
+down, there was nothing to=0Amigrate, because nobody had used it. By the te=
+am's own account, the same people=0Acould find 45 minutes for a Teams call =
+they didn't need to be on.=0A=0ASend any project with a blank column back t=
+o its sponsor before approval.=0A=0AIf you want a first pass from AI, paste=
+ your list into the assistant your=0Acompany already approves, with this re=
+quest:=0A=0ABelow is our project list for next year. For each project, give=
+ me four things:=0Athe owner (a person, not a department), the hours a week=
+ they can give it, the=0Afirst result the team should see in the first thre=
+e months, and the backup who=0Akeeps it running if the owner leaves. If any=
+ of the four is missing or vague,=0Awrite MISSING and say who on our team s=
+hould supply it. Then total each person's=0Ahours across all projects and l=
+ist anyone named on more than one. Don't guess=0Anames.=0A=0AIt should retu=
+rn one row per project with the gaps marked, then each person's=0Atotal hou=
+rs and anyone named on more than one project. Read the first-result=0Acolum=
+n yourself, because a vague answer can slip through as a note. The names=0A=
+still have to come from your team.=0A=0AWhat Did You Think of Today=E2=80=
+=99s Newsletter=3F=0A=0A=F0=9F=98=A0 [https://theoperationsbrief.com/]=F0=
+=9F=98=9E [https://theoperationsbrief.com/]=F0=9F=98=90=0A[https://theopera=
+tionsbrief.com/]=F0=9F=98=83 [https://theoperationsbrief.com/]=F0=9F=8E=89=
+=0A[https://theoperationsbrief.com/]=0A=0ABill=0A=0AThe Operations Brief=0A=
+=0ABy Bill Murphy, powered by Colony Spark [https://www.colonyspark.com/]=
+=0A=0AA weekly briefing on the decisions, people, and systems shaping manuf=
+acturing=0Aand distribution.=0A=0A=C2=A0=0A=0AColony Spark, 170 Mason Stree=
+t, Greenwich, Connecticut 06830, United States=0A=0AYou're receiving this b=
+ecause you subscribed to The Operations Brief.=0A=0A=C2=A9 2026 Colony Spar=
+k. All rights reserved.
+--_----viAaD314TqDe/nVG+a3pzA===_C1/D5-35942-DBF7BDA6
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:=
+schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
+ce" lang=3D"en"><head>=0A<meta charset=3D"UTF-8">=0A<meta name=3D"viewport"=
+ content=3D"width=3Ddevice-width, initial-scale=3D1.0">=0A<meta http-equiv=
+=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0A<meta name=3D"x-apple-disable=
+-message-reformatting">=0A<meta name=3D"format-detection" content=3D"teleph=
+one=3Dno,address=3Dno,email=3Dno,date=3Dno,url=3Dno">=0A<meta name=3D"color=
+-scheme" content=3D"light only">=0A<meta name=3D"supported-color-schemes" c=
+ontent=3D"light only">=0A<title>The Operations Brief</title>=0A<!--[if mso]=
+>=0A<xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:=
+AllowPNG/></o:OfficeDocumentSettings></xml>=0A<style type=3D"text/css">=0At=
+able, td, th {border-collapse: collapse; mso-table-lspace: 0pt; mso-table-r=
+space: 0pt;}=0Atd, p, a, span, div, h1, h2, h3 {mso-line-height-rule: exact=
+ly;}=0Abody, table, td, p, a, h1, h2, h3 {font-family: 'Segoe UI', Arial, s=
+ans-serif !important;}=0A</style>=0A<![endif]-->=0A<style type=3D"text/css"=
+>=0A@media only screen and (max-width:480px) {=0A.px { padding:32px 22px !i=
+mportant; }=0A.px-a { padding:20px 22px !important; }=0A.px-f { padding:28p=
+x 22px !important; }=0A.h1 { font-size:40px !important; line-height:44px !i=
+mportant; letter-spacing:-1.5px !important; }=0A}=0A</style>=0A<style type=
+=3D"text/css">@media only screen and (max-width:620px){.osm-full{width:100%=
+!important;max-width:100%!important}.osm-img{max-width:100%!important;heigh=
+t:auto!important}}</style></head>=0A<body bgcolor=3D"#f6f8f4" style=3D"marg=
+in:0;padding:0;width:100%;background-color:#f6f8f4;-webkit-text-size-adjust=
+:100%;-ms-text-size-adjust:100%;color-scheme:light only;" class=3D"bodyClas=
+s"><span style=3D"display:none">Name the owner before you fund the project&=
+#x2014;and plan for when they leave.</span>=0A<div style=3D"display:none;ma=
+x-height:0;overflow:hidden;font-size:1px;line-height:1px;color:#f6f8f4;mso-=
+hide:all;">Name the owner before you fund the project, and plan for when th=
+ey leave.&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#=
+xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&=
+#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200=
+C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#x=
+A0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#=
+x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C=
+;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA=
+0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x=
+200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;=
+&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0=
+;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x2=
+00C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&=
+#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;=
+&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x20=
+0C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#=
+xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&=
+#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;&#x200C;&#xA0;</div>=
+=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" bgcolor=3D"#f6f8f4" style=3D"background-color:#f6f8f4=
+;width:100%;">=0A<tbody><tr>=0A<td align=3D"center" valign=3D"top" style=3D=
+"padding:24px 12px;">=0A<!--[if mso]><table class=3D"osm-full" role=3D"pres=
+entation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"600" al=
+ign=3D"center"><tr><td><![endif]-->=0A<table role=3D"presentation" cellspac=
+ing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" align=3D"center" st=
+yle=3D"max-width:600px;width:100%;">=0A<!-- HEADER -->=0A<tbody><tr>=0A<td =
+align=3D"center" bgcolor=3D"#172b25" style=3D"background-color:#172b25;bord=
+er-radius:14px 14px 0 0;padding:44px 32px 36px;">=0A<p style=3D"margin:0 0 =
+16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos=
+;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-heigh=
+t:20px;color:#b2c2af;mso-line-height-rule:exactly;font-weight:700;text-alig=
+n:center;">A weekly briefing for the industrial economy</p>=0A<h1 class=3D"=
+h1" style=3D"margin:0;padding:0;font-family:&apos;DM Sans&apos;,-apple-syst=
+em,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-seri=
+f;font-size:52px;line-height:54px;font-weight:600;letter-spacing:-2px;color=
+:#f3f7eb;text-align:center;mso-line-height-rule:exactly;">The Operations<br=
+><span style=3D"color:#dfef93;">Brief</span></h1>=0A<p style=3D"margin:20px=
+ 0 0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos=
+;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-heigh=
+t:20px;color:#c0cbbc;mso-line-height-rule:exactly;text-align:center;">By <s=
+trong style=3D"color:#f3f7eb;font-weight:700;">Bill Murphy</strong>, powere=
+d by <a href=3D"https://www.colonyspark.com/" style=3D"color:#c0cbbc;text-d=
+ecoration:none;">Colony Spark</a></p>=0A</td>=0A</tr>=0A<tr>=0A<td bgcolor=
+=3D"#172b25" style=3D"background-color:#172b25;padding:0 32px;">=0A<table r=
+ole=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=
+=3D"100%"><tbody><tr><td height=3D"1" bgcolor=3D"#3a4b40" style=3D"height:1=
+px;background-color:#3a4b40;font-size:0;line-height:0;">&#xA0;</td></tr></t=
+body></table>=0A</td>=0A</tr>=0A<tr>=0A<td align=3D"center" bgcolor=3D"#172=
+b25" style=3D"background-color:#172b25;padding:14px 32px 16px;border-radius=
+:0 0 14px 14px;">=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,-a=
+pple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,=
+sans-serif;font-size:13px;line-height:18px;color:#b2c2af;mso-line-height-ru=
+le:exactly;text-align:center;">October 23, 2026</p>=0A</td>=0A</tr>=0A=0A<!=
+-- INTRO -->=0A<tr><td class=3D"px" style=3D"padding:40px 44px 40px;border-=
+bottom:1px solid #d8dfd6;">=0A<p style=3D"margin:0 0 16px;font-family:&apos=
+;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto=
+,Helvetica,Arial,sans-serif;font-size:17px;line-height:28px;color:#142a25;m=
+so-line-height-rule:exactly;">Your 2027 capital list puts a payback number =
+next to each project. If it doesn&apos;t also name the person who&apos;ll r=
+un that project after the installer leaves, no one is on record to deliver =
+the payback.</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 20px;">=0A<tbody><=
+tr><td bgcolor=3D"#e5ebdf" style=3D"background-color:#e5ebdf;border-radius:=
+10px;padding:22px 24px;">=0A<p style=3D"margin:0 0 10px;font-family:&apos;D=
+M Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,H=
+elvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#142a25;mso=
+-line-height-rule:exactly;font-weight:700;">This week&apos;s question</p>=
+=0A<p style=3D"margin:0 0 14px;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:17px;line-height:26px;color:#142a25;mso-line-height-rule:exactly=
+;font-weight:700;">Does your 2027 capital list name who will run each proje=
+ct=3F</p>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0=
+" border=3D"0" width=3D"100%" style=3D"margin:0 0 8px;"><tbody><tr><td bgco=
+lor=3D"#FFFFFF" style=3D"background-color:#FFFFFF;border:1px solid #2A6B4F;=
+border-radius:8px;"><a href=3D"https://tally.so/r/RWG6Jl=3Fanswer=3DYes%2C%=
+20every%20project&email=3D${email}&campaign=3Dtob_poll_4&v=3D1" target=3D"_=
+blank" style=3D"display:block;padding:12px 16px;font-family:&apos;DM Sans&a=
+pos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Arial,sans-serif=
+;font-size:15px;font-weight:700;line-height:20px;color:#142A25;text-decorat=
+ion:none;text-align:center;">Yes, every project</a></td></tr></tbody></tabl=
+e>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0" width=3D"100%" style=3D"margin:0 0 8px;"><tbody><tr><td bgcolor=3D"=
+#FFFFFF" style=3D"background-color:#FFFFFF;border:1px solid #2A6B4F;border-=
+radius:8px;"><a href=3D"https://tally.so/r/RWG6Jl=3Fanswer=3DSome%20of%20th=
+em&email=3D${email}&campaign=3Dtob_poll_4&v=3D1" target=3D"_blank" style=3D=
+"display:block;padding:12px 16px;font-family:&apos;DM Sans&apos;,-apple-sys=
+tem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Arial,sans-serif;font-size:15px=
+;font-weight:700;line-height:20px;color:#142A25;text-decoration:none;text-a=
+lign:center;">Some of them</a></td></tr></tbody></table>=0A<table role=3D"p=
+resentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%=
+" style=3D"margin:0 0 8px;"><tbody><tr><td bgcolor=3D"#FFFFFF" style=3D"bac=
+kground-color:#FFFFFF;border:1px solid #2A6B4F;border-radius:8px;"><a href=
+=3D"https://tally.so/r/RWG6Jl=3Fanswer=3DNot%20yet&email=3D${email}&campaig=
+n=3Dtob_poll_4&v=3D1" target=3D"_blank" style=3D"display:block;padding:12px=
+ 16px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apo=
+s;Segoe UI&apos;,Arial,sans-serif;font-size:15px;font-weight:700;line-heigh=
+t:20px;color:#142A25;text-decoration:none;text-align:center;">Not yet</a></=
+td></tr></tbody></table>=0A<p style=3D"margin:6px 0 0;font-family:&apos;DM =
+Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Hel=
+vetica,Arial,sans-serif;font-size:15px;line-height:24px;color:#3f4f47;mso-l=
+ine-height-rule:exactly;">One tap is enough.</p>=0A</td></tr>=0A</tbody></t=
+able>=0A<p style=3D"margin:0 0 16px;font-family:&apos;DM Sans&apos;,-apple-=
+system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-=
+serif;font-size:17px;line-height:28px;color:#142a25;mso-line-height-rule:ex=
+actly;font-weight:700;">More below: two case studies on who carries an impr=
+ovement, and a four-column check to run on your list before it&apos;s final=
+.</p>=0A</td></tr>=0A<tr><td class=3D"px" style=3D"padding:40px 44px 40px;=
+border-bottom:1px solid #d8dfd6;">=0A<table role=3D"presentation" cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0" style=3D"margin:0 0 18px;"><tbody><=
+tr><td bgcolor=3D"#e5ebdf" style=3D"background-color:#e5ebdf;border-radius:=
+4px;padding:3px 7px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacS=
+ystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:=
+12px;line-height:16px;color:#142a25;mso-line-height-rule:exactly;">01</td><=
+td style=3D"padding-left:10px;font-family:&apos;DM Sans&apos;,-apple-system=
+,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;=
+font-size:15px;line-height:20px;font-weight:700;color:#142a25;mso-line-heig=
+ht-rule:exactly;">The Shift</td></tr></tbody></table>=0A<h2 style=3D"margin=
+:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,=
+&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:28px;line-=
+height:34px;font-weight:700;letter-spacing:-0.5px;color:#142a25;mso-line-he=
+ight-rule:exactly;">Name the Person Before You Fund the Project</h2>=0A<p s=
+tyle=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,Blink=
+MacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-s=
+ize:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">In a=
+ survey IndustryWeek reported on October 5, 36% of respondents named automa=
+tion and advanced technology as their top investment priority for 2027. Wor=
+kforce training came third, at 18%, and nearly 30% said their organizations=
+ aren&#x2019;t effective at attracting and keeping the next generation of t=
+alent.</p>=0A<p style=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-a=
+pple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,=
+sans-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height-ru=
+le:exactly;">A machine arrives on a set date. The people who learn it and k=
+eep it working are harder to plan for, and some of them will leave.</p>=0A<=
+p style=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-system,Bl=
+inkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;fon=
+t-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly;">A=
+t SMA, Inc., an agricultural parts supplier, the team that had used Toyota =
+Kata in the warehouse for almost two years took it to every department, wit=
+h help from Arkansas Manufacturing Solutions. A NIST case study reports $1.=
+75 million in increased sales, $5 million in retained sales and $500,000 in=
+ cost savings, without saying over what period.</p>=0A<p style=3D"margin:0 =
+0 18px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&ap=
+os;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-hei=
+ght:27px;color:#3f4f47;mso-line-height-rule:exactly;">At Green Bay Packagin=
+g&#x2019;s Arkansas Kraft mill, regular turnover means the mill keeps needi=
+ng new internal auditors for its ISO 9001 quality system, so training them =
+is a standing job.</p>=0A<p style=3D"margin:0 0 26px;font-family:&apos;DM S=
+ans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helv=
+etica,Arial,sans-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-li=
+ne-height-rule:exactly;">SMA had people inside who owned the method. The mi=
+ll has to keep replacing them. Either way, an approval needs a named owner =
+and a plan for who learns the work next.</p>=0A</td></tr>=0A<tr><td class=
+=3D"px" style=3D"padding:40px 44px 40px;border-bottom:1px solid #d8dfd6;">=
+=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" style=3D"margin:0 0 18px;"><tbody><tr><td bgcolor=3D"#e5ebdf" style=
+=3D"background-color:#e5ebdf;border-radius:4px;padding:3px 7px;font-family:=
+&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,R=
+oboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;color:#142=
+a25;mso-line-height-rule:exactly;">02</td><td style=3D"padding-left:10px;fo=
+nt-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe =
+UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:20px;=
+font-weight:700;color:#142a25;mso-line-height-rule:exactly;">From the Floor=
+</td></tr></tbody></table>=0A<h2 style=3D"margin:0 0 10px;font-family:&apos=
+;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto=
+,Helvetica,Arial,sans-serif;font-size:28px;line-height:34px;font-weight:700=
+;letter-spacing:-0.5px;color:#142a25;mso-line-height-rule:exactly;">No One =
+Inside to Carry It</h2>=0A<table role=3D"presentation" cellspacing=3D"0" ce=
+llpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 26px;">=0A<=
+tbody><tr><td bgcolor=3D"#172b25" style=3D"background-color:#172b25;border-=
+radius:10px;padding:24px 26px;">=0A<table role=3D"presentation" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"40" style=3D"margin:0 0 16px=
+;">=0A<tbody><tr><td width=3D"40" height=3D"3" bgcolor=3D"#dfef93" style=3D=
+"width:40px;height:3px;background-color:#dfef93;font-size:0;line-height:0;"=
+>=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margin:0 0 18px;font-family=
+:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,=
+Roboto,Helvetica,Arial,sans-serif;font-size:20px;line-height:30px;color:#f3=
+f7eb;mso-line-height-rule:exactly;font-weight:500;letter-spacing:-0.2px;">&=
+quot;A lot of the improvement and optimization decisions in front of stakeh=
+olders, a lot of the time, don&apos;t have any internal people to support t=
+hem or champion them.&quot;</p>=0A<p style=3D"margin:0 0 2px;font-family:&a=
+pos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Rob=
+oto,Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#f3f7e=
+b;mso-line-height-rule:exactly;font-weight:700;"><a href=3D"https://www.lin=
+kedin.com/in/madhur-bedre/" style=3D"color:#f3f7eb;text-decoration:none;">M=
+adhur Bedre</a></p>=0A<p style=3D"margin:0;font-family:&apos;DM Sans&apos;,=
+-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Aria=
+l,sans-serif;font-size:13px;line-height:20px;color:#c0cbbc;mso-line-height-=
+rule:exactly;">President, <a href=3D"https://atlasprx.com/" style=3D"color:=
+#dfef93;text-decoration:underline;">Atlas Prediction Control</a>. <a href=
+=3D"https://www.theoperationsbrief.com/roundtable/rt02-worth-the-investment=
+/" style=3D"color:#dfef93;text-decoration:underline;">The Operations Brief =
+Roundtable No. 2, October 2, 2026</a></p>=0A</td></tr>=0A</tbody></table>=
+=0A<p style=3D"margin:0 0 18px;font-family:&apos;DM Sans&apos;,-apple-syste=
+m,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif=
+;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exactly=
+;">Madhur&apos;s firm helps chemical and petrochemical plants keep their pr=
+ocess control tuned. On the panel he tied the problem to attrition, with ex=
+perienced people leaving plants and, in some cases, the industry. He also s=
+aid companies have a blind spot past the ROI, in carrying a project out and=
+ keeping its gains over the long run.</p>=0A<p style=3D"margin:0 0 18px;fon=
+t-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe U=
+I&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;c=
+olor:#3f4f47;mso-line-height-rule:exactly;">That&apos;s one consultant&apos=
+;s view from his own client work. It lines up with what Green Bay Packaging=
+ is managing at its mill.</p>=0A<table role=3D"presentation" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 0px;"=
+>=0A<tbody><tr><td bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;bo=
+rder:1px solid #d8dfd6;border-radius:10px;padding:22px 24px;">=0A<p style=
+=3D"margin:0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFo=
+nt,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;li=
+ne-height:24px;color:#3f4f47;mso-line-height-rule:exactly;"><a href=3D"http=
+s://www.theoperationsbrief.com/roundtable/rt02-worth-the-investment/" style=
+=3D"color:#2a6b4f;text-decoration:underline;">Read the full Roundtable No. =
+2 recap</a></p>=0A</td></tr>=0A</tbody></table>=0A</td></tr>=0A<tr><td clas=
+s=3D"px" style=3D"padding:40px 44px 40px;">=0A<table role=3D"presentation" =
+cellspacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"margin:0 0 18px;"=
+><tbody><tr><td bgcolor=3D"#e5ebdf" style=3D"background-color:#e5ebdf;borde=
+r-radius:4px;padding:3px 7px;font-family:&apos;DM Sans&apos;,-apple-system,=
+BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;f=
+ont-size:12px;line-height:16px;color:#142a25;mso-line-height-rule:exactly;"=
+>03</td><td style=3D"padding-left:10px;font-family:&apos;DM Sans&apos;,-app=
+le-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sa=
+ns-serif;font-size:15px;line-height:20px;font-weight:700;color:#142a25;mso-=
+line-height-rule:exactly;">The Stack</td></tr></tbody></table>=0A<h2 style=
+=3D"margin:0 0 10px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacS=
+ystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:=
+28px;line-height:34px;font-weight:700;letter-spacing:-0.5px;color:#142a25;m=
+so-line-height-rule:exactly;">Add Four Columns to Your 2027 List</h2>=0A<p =
+style=3D"margin:0 0 26px;font-family:&apos;DM Sans&apos;,-apple-system,Blin=
+kMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-=
+size:17px;line-height:26px;color:#6b7a71;mso-line-height-rule:exactly;">At =
+the October 2 roundtable I asked the panel what one thing a manufacturer sh=
+ould check before approving its next improvement. Two of the three answers =
+came back to the people who&apos;d carry it. Here&apos;s the check I&apos;d=
+ run with your plant leads this week.</p>=0A<p style=3D"margin:0 0 18px;fon=
+t-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe U=
+I&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:27px;c=
+olor:#3f4f47;mso-line-height-rule:exactly;">On paper or in the spreadsheet =
+you already use, add these four columns to every project on the list:</p>=
+=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" style=3D"margin:0 0 24px;"><tbody><tr><td width=3D"18=
+" valign=3D"top" style=3D"width:18px;padding-top:9px;"><table role=3D"prese=
+ntation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td wi=
+dth=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" style=3D"width:7px;height:7px;ba=
+ckground-color:#2a6b4f;border-radius:2px;font-size:0;line-height:0;">&#xA0;=
+</td></tr></tbody></table></td><td valign=3D"top"><p style=3D"margin:0 0 8p=
+x;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:2=
+4px;color:#3f4f47;mso-line-height-rule:exactly;"><strong style=3D"color:#14=
+2a25;font-weight:700;">Owner:</strong> one person, by name.</p>=0A</td></tr=
+></tbody></table>=0A<table role=3D"presentation" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 24px;"><tbody><tr=
+><td width=3D"18" valign=3D"top" style=3D"width:18px;padding-top:9px;"><tab=
+le role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><=
+tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" style=3D"width:7=
+px;height:7px;background-color:#2a6b4f;border-radius:2px;font-size:0;line-h=
+eight:0;">&#xA0;</td></tr></tbody></table></td><td valign=3D"top"><p style=
+=3D"margin:0 0 8px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSy=
+stemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:1=
+5px;line-height:24px;color:#3f4f47;mso-line-height-rule:exactly;"><strong s=
+tyle=3D"color:#142a25;font-weight:700;">Hours:</strong> how many hours a we=
+ek that person can actually give it, and what comes off their plate to make=
+ room.</p>=0A</td></tr></tbody></table>=0A<table role=3D"presentation" cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin=
+:0 0 24px;"><tbody><tr><td width=3D"18" valign=3D"top" style=3D"width:18px;=
+padding-top:9px;"><table role=3D"presentation" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a=
+6b4f" style=3D"width:7px;height:7px;background-color:#2a6b4f;border-radius:=
+2px;font-size:0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td va=
+lign=3D"top"><p style=3D"margin:0 0 8px;font-family:&apos;DM Sans&apos;,-ap=
+ple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,s=
+ans-serif;font-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rul=
+e:exactly;"><strong style=3D"color:#142a25;font-weight:700;">First result:<=
+/strong> what the team will see working in the first three months.</p>=0A</=
+td></tr></tbody></table>=0A<table role=3D"presentation" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:0 0 24px;"><tb=
+ody><tr><td width=3D"18" valign=3D"top" style=3D"width:18px;padding-top:9px=
+;"><table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0"><tbody><tr><td width=3D"7" height=3D"7" bgcolor=3D"#2a6b4f" style=3D=
+"width:7px;height:7px;background-color:#2a6b4f;border-radius:2px;font-size:=
+0;line-height:0;">&#xA0;</td></tr></tbody></table></td><td valign=3D"top"><=
+p style=3D"margin:0 0 8px;font-family:&apos;DM Sans&apos;,-apple-system,Bli=
+nkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font=
+-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rule:exactly;"><s=
+trong style=3D"color:#142a25;font-weight:700;">Backup:</strong> who learns =
+it alongside the owner and keeps it running if the owner leaves.</p>=0A</td=
+></tr></tbody></table>=0A<p style=3D"margin:0 0 18px;font-family:&apos;DM S=
+ans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helv=
+etica,Arial,sans-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-li=
+ne-height-rule:exactly;">Fill in Backup first, since it decides what happen=
+s to the project when the owner leaves. Then add up each owner&apos;s hours=
+ across the whole list. A plant manager named on four projects is a capacit=
+y problem that no single row will show you.</p>=0A<p style=3D"margin:0 0 18=
+px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;S=
+egoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:=
+27px;color:#3f4f47;mso-line-height-rule:exactly;">I&apos;ve made the mistak=
+e the Hours column is there to catch. I built a content tool for a client t=
+eam and recorded a walkthrough, and the three experts they&apos;d assigned =
+all got logins. When the engagement wound down, there was nothing to migrat=
+e, because nobody had used it. By the team&apos;s own account, the same peo=
+ple could find 45 minutes for a Teams call they didn&apos;t need to be on.<=
+/p>=0A<p style=3D"margin:0 0 24px;font-family:&apos;DM Sans&apos;,-apple-sy=
+stem,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-se=
+rif;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule:exac=
+tly;">Send any project with a blank column back to its sponsor before appro=
+val.</p>=0A<p style=3D"margin:0 0 14px;font-family:&apos;DM Sans&apos;,-app=
+le-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sa=
+ns-serif;font-size:16px;line-height:27px;color:#3f4f47;mso-line-height-rule=
+:exactly;font-weight:700;">If you want a first pass from AI, paste your lis=
+t into the assistant your company already approves, with this request:</p>=
+=0A<table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" style=3D"margin:0 0 24px;">=0A<tbody><tr><td bgcolor=
+=3D"#ffffff" style=3D"background-color:#ffffff;border:1px solid #d8dfd6;bor=
+der-radius:10px;padding:22px 24px;">=0A<p style=3D"margin:0 0 10px;font-fam=
+ily:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apo=
+s;,Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:24px;color:=
+#3f4f47;mso-line-height-rule:exactly;">Below is our project list for next y=
+ear. For each project, give me four things: the owner (a person, not a depa=
+rtment), the hours a week they can give it, the first result the team shoul=
+d see in the first three months, and the backup who keeps it running if the=
+ owner leaves. If any of the four is missing or vague, write MISSING and sa=
+y who on our team should supply it. Then total each person&apos;s hours acr=
+oss all projects and list anyone named on more than one. Don&apos;t guess n=
+ames.</p>=0A<p style=3D"margin:0 0 10px;font-family:&apos;DM Sans&apos;,-ap=
+ple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,s=
+ans-serif;font-size:15px;line-height:24px;color:#3f4f47;mso-line-height-rul=
+e:exactly;">It should return one row per project with the gaps marked, then=
+ each person&apos;s total hours and anyone named on more than one project. =
+Read the first-result column yourself, because a vague answer can slip thro=
+ugh as a note. The names still have to come from your team.</p>=0A</td></tr=
+>=0A</tbody></table>=0A<!-- RATING -->=0A<table role=3D"presentation" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"margin:=
+32px 0 26px;">=0A<tbody><tr><td align=3D"center" bgcolor=3D"#FFFFFF" style=
+=3D"background-color:#FFFFFF;border:1px solid #d8dfd6;border-radius:10px;pa=
+dding:22px 16px 18px;">=0A<p style=3D"margin:0 0 12px;font-family:&apos;DM =
+Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Hel=
+vetica,Arial,sans-serif;font-size:19px;line-height:26px;font-weight:700;col=
+or:#142a25;text-align:center;mso-line-height-rule:exactly;">What Did You Th=
+ink of Today&#x2019;s Newsletter=3F</p>=0A<table role=3D"presentation" cell=
+spacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center" style=3D"marg=
+in:0 auto;max-width:340px;width:100%;"><tbody><tr><td align=3D"center" widt=
+h=3D"20%" style=3D"padding:0 4px;"><a href=3D"https://theoperationsbrief.co=
+m/" title=3D"Hated it" target=3D"_blank" style=3D"display:inline-block;text=
+-decoration:none;font-size:34px;line-height:44px;">&#x1F620;</a></td><td al=
+ign=3D"center" width=3D"20%" style=3D"padding:0 4px;"><a href=3D"https://th=
+eoperationsbrief.com/" title=3D"Disappointing" target=3D"_blank" style=3D"d=
+isplay:inline-block;text-decoration:none;font-size:34px;line-height:44px;">=
+&#x1F61E;</a></td><td align=3D"center" width=3D"20%" style=3D"padding:0 4px=
+;"><a href=3D"https://theoperationsbrief.com/" title=3D"It was okay" target=
+=3D"_blank" style=3D"display:inline-block;text-decoration:none;font-size:34=
+px;line-height:44px;">&#x1F610;</a></td><td align=3D"center" width=3D"20%" =
+style=3D"padding:0 4px;"><a href=3D"https://theoperationsbrief.com/" title=
+=3D"Good" target=3D"_blank" style=3D"display:inline-block;text-decoration:n=
+one;font-size:34px;line-height:44px;">&#x1F603;</a></td><td align=3D"center=
+" width=3D"20%" style=3D"padding:0 4px;"><a href=3D"https://theoperationsbr=
+ief.com/" title=3D"Loved it" target=3D"_blank" style=3D"display:inline-bloc=
+k;text-decoration:none;font-size:34px;line-height:44px;">&#x1F389;</a></td>=
+</tr></tbody></table>=0A</td></tr>=0A</tbody></table>=0A<p style=3D"margin:=
+0 0 26px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&=
+apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-h=
+eight:27px;color:#3f4f47;mso-line-height-rule:exactly;">Bill</p>=0A</td></t=
+r>=0A<!-- FOOTER -->=0A<tr>=0A<td class=3D"px-f" bgcolor=3D"#172b25" style=
+=3D"background-color:#172b25;border-radius:14px;padding:34px 40px;">=0A<p s=
+tyle=3D"margin:0 0 4px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkM=
+acSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-si=
+ze:18px;line-height:24px;color:#f3f7eb;mso-line-height-rule:exactly;font-we=
+ight:700;letter-spacing:-0.2px;">The Operations Brief</p>=0A<p style=3D"mar=
+gin:0 0 14px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFo=
+nt,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:13px;li=
+ne-height:20px;color:#c0cbbc;mso-line-height-rule:exactly;">By Bill Murphy,=
+ powered by <a href=3D"https://www.colonyspark.com/" style=3D"color:#dfef93=
+;text-decoration:none;">Colony Spark</a></p>=0A<p style=3D"margin:0 0 22px;=
+font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Sego=
+e UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:22p=
+x;color:#c0cbbc;mso-line-height-rule:exactly;">A weekly briefing on the dec=
+isions, people, and systems shaping manufacturing and distribution.</p>=0A<=
+table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+" width=3D"100%" style=3D"margin:0 0 18px;"><tbody><tr><td height=3D"1" bgc=
+olor=3D"#3a4b40" style=3D"height:1px;background-color:#3a4b40;font-size:0;l=
+ine-height:0;">&#xA0;</td></tr></tbody></table>=0A<p style=3D"margin:0 0 6p=
+x;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&apos;Se=
+goe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:1=
+8px;color:#b2c2af;mso-line-height-rule:exactly;">Colony Spark, 170 Mason St=
+reet, Greenwich, Connecticut 06830, United States</p>=0A<p style=3D"margin:=
+0 0 6px;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&a=
+pos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-he=
+ight:18px;color:#b2c2af;mso-line-height-rule:exactly;">You&apos;re receivin=
+g this because you subscribed to The Operations Brief.</p>=0A<p style=3D"ma=
+rgin:0;font-family:&apos;DM Sans&apos;,-apple-system,BlinkMacSystemFont,&ap=
+os;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-hei=
+ght:18px;color:#b2c2af;mso-line-height-rule:exactly;">&#xA9; 2026 Colony Sp=
+ark. All rights reserved.</p>=0A</td>=0A</tr>=0A<tr><td height=3D"24" style=
+=3D"height:24px;font-size:0;line-height:0;">&#xA0;</td></tr>=0A</tbody></ta=
+ble>=0A<!--[if mso]></td></tr></table><![endif]-->=0A</td>=0A</tr>=0A</tbod=
+y></table>=0A=0A<img src=3D"https://trk.ebitcommweekly.com/opens=3Femail=3D=
+ef9adbd7-58a1-5141-a08b-c984cd7ffc03&type=3Dhtml&info=3DeyJhbGciOiJIUzI1NiI=
+sInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN=
+2I3OWIiLCJjYW1wYWlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTlj=
+IiwiaWF0IjoxNzkyNzY5OTgxfQ.2ImJkXje8YHzYTTfufy0yWmIkHbIPoUvIocVH6CDzwo" hei=
+ght=3D"1px" width=3D"1px"><table width=3D"100%" align=3D"center"><tbody><tr=
+><td width=3D"100%" align=3D"center">=0A        <a style=3D"margin-left: au=
+to; margin-right: auto; color: grey; font-size: 10px; text-decoration: unde=
+rline;" href=3D"https://trk.ebitcommweekly.com/unsubscribes=3Femail=3Def9ad=
+bd7-58a1-5141-a08b-c984cd7ffc03&info=3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9=
+.eyJ1c2VySWQiOiJjYzU2NzA4ZC0wNTU4LTRmZWEtOGMwNy1hNGJmYTVhN2I3OWIiLCJjYW1wY=
+WlnbklkIjoiNjkyYzM4ZmMtMDkwMS00OTczLWI1MzctZGY4NGQ2Yjg1YTljIiwiaWF0IjoxNzky=
+NzY5OTgxfQ.2ImJkXje8YHzYTTfufy0yWmIkHbIPoUvIocVH6CDzwo&type=3Dhtml">Click h=
+ere to unsubscribe</a>=0A        </td></tr></tbody></table></body></html>
+--_----viAaD314TqDe/nVG+a3pzA===_C1/D5-35942-DBF7BDA6--
+
